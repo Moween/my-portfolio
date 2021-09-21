@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import { createTheme, ThemeProvider } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 import './css/App.css';
 
 const theme = createTheme({
@@ -17,10 +18,10 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <Container maxWidth="xl">
         <Header />
-      </div>
-    </ThemeProvider>    
+      </Container>    
+    </ThemeProvider>
   );
 }
 
