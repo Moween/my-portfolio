@@ -22,4 +22,19 @@
       @include bounceImg;
     }
   }
+  .social-icons-container {
+    position: absolute;
+    top: 37%;
+    right: 5%;
+    @include flexItems(column, space-between, center);
+    height: 150px;
+    .social-icon {
+      cursor: pointer;
+      &:hover {
+        color: $yellow;
+        transform: rotate(360deg);
+        @include transition-ease;      
+      }
+    }
+  }
 }
