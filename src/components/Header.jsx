@@ -20,7 +20,7 @@ const Header = () => {
   return ( 
     <header>
         {!showMenu && <Typography className={brandLogo} variant="h5" component="h3">
-          Maureen
+          Maureen.
         </Typography> }       
         <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
     </header> 
