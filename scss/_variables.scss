@@ -13,5 +13,20 @@ $green: #008000;
 
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
+};
+
+@mixin bounceImg {  
+  animation: bounce 0.5s alternate infinite;
+  @include bounceItem;
 }
 
+@mixin bounceItem {
+  @keyframes bounce {
+    from { 
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 50px, 0);
+    } 
+  };
+}
