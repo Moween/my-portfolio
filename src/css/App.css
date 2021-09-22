@@ -151,6 +151,68 @@ table {
   padding: 0.5rem;
 }
 
+.menu .navbar .menu-nav_link:hover {
+  color: #FFF124;
+}
+
+.main {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.main .greeting-text {
+  padding: 1rem;
+}
+
+.main .intro-text {
+  position: absolute;
+  top: 12%;
+  right: 20%;
+}
+
+.main img {
+  margin: 10px 0;
+  max-width: 100%;
+  width: 400px;
+  height: 300px;
+}
+
+.main img:hover {
+  -webkit-animation: bounce 0.5s alternate infinite;
+          animation: bounce 0.5s alternate infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+}
+
+.about-section {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: pink;
+}
+
 *, html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -159,7 +221,6 @@ table {
 body {
   color: #FFFFFF;
   background-color: #0F0F0F;
-  overflow: hidden;
 }
 
 header {
@@ -182,10 +243,5 @@ header {
 
 header div {
   width: 50%;
-}
-
-main {
-  height: 100%;
-  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */

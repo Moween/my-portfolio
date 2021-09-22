@@ -1,0 +1,25 @@
+.main {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  .greeting-text {
+    padding: 1rem;
+  }
+  .intro-text {
+    position: absolute;
+    top: 12%;
+    right: 20%
+  }
+  
+  img {
+    margin: 10px 0;
+    max-width: 100%;
+    width: 400px;
+    height: 300px;
+
+    &:hover {
+      @include bounceImg;
+    }
+  }
+}
