@@ -13,6 +13,11 @@ const theme = createTheme({
       lg: 1024,
       xl: 1140,
     },
+  },
+  typography: {
+    h4: {
+      fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
+    }
   }
 })
 
