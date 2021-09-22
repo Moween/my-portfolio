@@ -1,6 +1,7 @@
 @import './reset';
 @import './variables';
 @import './menu';
+@import './home';
 
 *, html {
   box-sizing: border-box;
@@ -9,7 +10,6 @@
 body {
   color: $white;
   background-color: $black;
-  overflow: hidden;
 }
 
 header {
@@ -19,9 +19,4 @@ header {
   div {
     width: 50%;
   }
-}
-
-main {
-  height: 100%;
-  width: 100%;
 }
