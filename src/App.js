@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Home from './pages/Home';
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import './css/App.css';
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xl">
         <Header />
+        <Home />
       </Container>    
     </ThemeProvider>
   );
