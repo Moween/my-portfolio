@@ -78,6 +78,9 @@
         text-decoration: none;
         color: $white;
         padding: 0.5rem;
+        &:hover {
+          color: $yellow;
+        }
       }
     }
   } 
