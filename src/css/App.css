@@ -48,6 +48,28 @@ table {
   border-spacing: 0;
 }
 
+header {
+  width: 100%;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div {
+  width: 50%;
+}
+
 .menu .menu-btn {
   position: absolute;
   z-index: 1;
@@ -155,31 +177,31 @@ table {
   color: #FFF124;
 }
 
-.main {
+.home {
   height: 100vh;
   position: relative;
   width: 100%;
   text-align: center;
 }
 
-.main .greeting-text {
+.home .greeting-text {
   padding: 1rem;
 }
 
-.main .intro-text {
+.home .intro-text {
   position: absolute;
   top: 12%;
   right: 20%;
 }
 
-.main img {
+.home img {
   margin: 10px 0;
   max-width: 100%;
   width: 400px;
   height: 300px;
 }
 
-.main img:hover {
+.home img:hover {
   -webkit-animation: bounce 0.5s alternate infinite;
           animation: bounce 0.5s alternate infinite;
 }
@@ -206,7 +228,7 @@ table {
   }
 }
 
-.main .social-icons-container {
+.home .social-icons-container {
   position: absolute;
   top: 37%;
   right: 5%;
@@ -226,11 +248,11 @@ table {
   height: 150px;
 }
 
-.main .social-icons-container .social-icon {
+.home .social-icons-container .social-icon {
   cursor: pointer;
 }
 
-.main .social-icons-container .social-icon:hover {
+.home .social-icons-container .social-icon:hover {
   color: #FFF124;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -238,35 +260,14 @@ table {
   transition: all 0.5s ease-in-out;
 }
 
-*, html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.about-section {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
 }
 
 body {
   color: #FFFFFF;
   background-color: #0F0F0F;
-}
-
-header {
-  width: 100%;
-  padding: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header div {
-  width: 50%;
 }
 /*# sourceMappingURL=App.css.map */

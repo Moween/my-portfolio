@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const { greetingText, img, button } = useStyles();
   return ( 
-    <main className="main">
+    <section className="home">
       <div className="greeting-text">
         <Typography variant="h1" component="p" style={{color: '#cb6036'}} className={greetingText}>
           Front-end developer
@@ -73,7 +73,7 @@ const Home = () => {
       >
         Download resume
       </Button>
-    </main>
+    </section>
   );
 };
  
