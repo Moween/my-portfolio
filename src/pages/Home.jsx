@@ -51,7 +51,7 @@ const Home = () => {
       </div>
       <div className="intro-text">
         <Typography variant="h4" component="h1">
-          Hi! I'm Maureen <Typography variant="h4"  component="span">Ezeilo </Typography>
+          Hi! I'm Maureen <Typography variant="h4" style={{color: '#cb6036'}} component="span">Ezeilo </Typography>
           and I love to code..
 
         </Typography>
