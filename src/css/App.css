@@ -72,7 +72,7 @@ header div {
 
 .menu .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   right: 1.5rem;
   top: 1.6rem;
   height: 20px;
@@ -135,7 +135,7 @@ header div {
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.95;
+  z-index: 1;
   visibility: hidden;
 }
 
@@ -149,6 +149,7 @@ header div {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   height: 100vh;
+  background-color: #0F0F0F;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +170,7 @@ header div {
 
 .menu .navbar .menu-nav_link {
   text-decoration: none;
+  cursor: pointer;
   color: #FFFFFF;
   padding: 0.5rem;
 }
@@ -180,6 +182,7 @@ header div {
 .home {
   height: 100vh;
   position: relative;
+  z-index: -1;
   width: 100%;
   text-align: center;
 }
@@ -258,12 +261,6 @@ header div {
           transform: rotate(360deg);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-.about-section {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
 }
 
 body {

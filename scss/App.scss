@@ -3,20 +3,8 @@
 @import './menu';
 @import './home';
 
-*, html {
-  box-sizing: border-box;
-}
  
 body {
   color: $white;
   background-color: $black;
-}
-
-header {
-  width: 100%;
-  padding: 1.25rem;
-  @include flexItems(row, space-between, center);
-  div {
-    width: 50%;
-  }
 }
