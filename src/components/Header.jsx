@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles({
@@ -20,7 +21,9 @@ const Header = () => {
   return ( 
     <header>
         {!showMenu && <Typography className={brandLogo} variant="h5" component="h3">
-          Maureen.
+          <Link to='/'>
+            Maureen.
+          </Link>
         </Typography> }       
         <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
     </header> 
