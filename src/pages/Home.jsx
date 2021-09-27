@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '20rem',
       lineHeight: '1.5rem',
     },
+    paddingTop: '0.625rem',
     opacity:  0.2,
     wordSpacing: 20,
     letterSpacing: '7px',
