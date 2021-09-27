@@ -1,7 +1,16 @@
+header {
+  width: 100%;
+  padding: 1.25rem;
+  @include flexItems(row, space-between, center);
+  div {
+    width: 50%;
+  }
+}
+
 .menu {
   .menu-btn {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 1.5rem;
     top: 1.6rem;
     height: 20px;
@@ -57,7 +66,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    opacity: 0.95;
+    z-index: 1;
     visibility: hidden;
 
     &.open {
@@ -67,6 +76,7 @@
     .menu-nav {
       flex-flow: column wrap;
       height: 100vh;
+      background-color: $black;
       overflow: hidden;
       @include flexItems(column, space-evenly, center);
   
@@ -76,6 +86,7 @@
       
       &_link {
         text-decoration: none;
+        cursor: pointer;
         color: $white;
         padding: 0.5rem;
         &:hover {

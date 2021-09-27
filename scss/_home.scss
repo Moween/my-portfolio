@@ -1,6 +1,7 @@
 .home {
   height: 100vh;
   position: relative;
+  z-index: -1;
   width: 100%;
   text-align: center;
   .greeting-text {
