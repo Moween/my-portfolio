@@ -18,7 +18,7 @@ const myNavBar = (props) => {
               {/* <a href="#about" className="menu-nav_link">
                 About
               </a> */}
-              <Link to="#about" className="menu-nav_link">
+              <Link to="#/about" className="menu-nav_link">
                 About
               </Link>
             </li>
