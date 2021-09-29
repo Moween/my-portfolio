@@ -8,10 +8,14 @@ const useStyles = makeStyles({
   brandLogo: {
     width: '25%',
   },
+  brandLogoText: {
+    color: '#fff',
+    textDecoration: 'none',
+  }
 });
 
 const Header = () => {
-  const { brandLogo } = useStyles();
+  const { brandLogo, brandLogoText } = useStyles();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -21,8 +25,8 @@ const Header = () => {
   return ( 
     <header>
         {!showMenu && <Typography className={brandLogo} variant="h5" component="h3">
-          <Link to='/'>
-            Maureen.
+          <Link to='/' className={brandLogoText}>
+            Maureen
           </Link>
         </Typography> }       
         <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
