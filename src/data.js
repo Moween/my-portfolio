@@ -50,4 +50,27 @@ const projects = [
   }
 ];
 
+export const navItems = [
+  {
+    path: '#about',
+    pathName: 'About'
+  },
+  {
+    path: '#projects',
+    pathName: 'Projects'
+  },
+  {
+    path: '#achievement',
+    pathName: 'Achievement'
+  },
+  {
+    path: '#article',
+    pathName: 'Article'
+  },
+  {
+    path: '#contacts',
+    pathName: 'Contacts'
+  }
+];
+
 export default projects;
