@@ -1,0 +1,21 @@
+.project-section {
+  width: 100%;
+  .headingContainer {
+    position: relative;
+    padding: 2rem;
+    margin-bottom: 10px;
+  };
+  
+  .transparentText {
+    opacity: 0.2;
+    letter-spacing: 5px;
+  };
+  
+  .projectText {
+    position: absolute;
+    top: 55%;
+    right: 45%;
+    word-spacing: 10;
+    font-size: 1.45rem;
+  };
+};

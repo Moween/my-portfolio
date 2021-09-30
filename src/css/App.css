@@ -263,6 +263,29 @@ header div {
   transition: all 0.5s ease-in-out;
 }
 
+.project-section {
+  width: 100%;
+}
+
+.project-section .headingContainer {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 10px;
+}
+
+.project-section .transparentText {
+  opacity: 0.2;
+  letter-spacing: 5px;
+}
+
+.project-section .projectText {
+  position: absolute;
+  top: 55%;
+  right: 45%;
+  word-spacing: 10;
+  font-size: 1.45rem;
+}
+
 body {
   color: #FFFFFF;
   background-color: #0F0F0F;
