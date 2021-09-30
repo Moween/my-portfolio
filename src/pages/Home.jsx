@@ -1,4 +1,6 @@
 import React from 'react';
+import About from '../components/About';
+import MyProjects from '../components/projectsComponent/MyProjects';
 import bgImg from '../images/Avater@2x.png'
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -44,37 +46,41 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const { greetingText, img, button } = useStyles();
   return ( 
-    <section className="home">
-      <div className="greeting-text">
-        <Typography variant="h1" component="p" style={{color: '#cb6036'}} className={greetingText}>
-          Front-end developer
-        </Typography>
-      </div>
-      <div className="intro-text">
-        <Typography variant="h4" component="h1">
-          Hi! I'm Maureen <Typography variant="h4" style={{color: '#cb6036'}} component="span">Ezeilo </Typography>
-          and I love to code..
-
-        </Typography>
-      </div>
-      <div>
-        <img className={img} src={bgImg} alt="laptop-guy" />
-      </div>
-      <div className="social-icons-container">
-        <TwitterIcon className="social-icon"/>
-        <LinkedInIcon className="social-icon"/>
-        <GitHubIcon className="social-icon"/>
-      </div>
-      <Button 
-        variant="contained"
-        component="span" 
-        className={button}
-        endIcon={<CloudDownloadOutlinedIcon />}
-        href="#"
-      >
-        Download resume
-      </Button>
-    </section>
+    <main>
+      <section className="landing-section">
+        <div className="greeting-text">
+          <Typography variant="h1" component="p" style={{color: '#cb6036'}} className={greetingText}>
+            Front-end developer
+          </Typography>
+        </div>
+        <div className="intro-text">
+          <Typography variant="h4" component="h1">
+            Hi! I'm Maureen <Typography variant="h4" style={{color: '#cb6036'}} component="span">Ezeilo </Typography>
+            and I love to code..
+  
+          </Typography>
+        </div>
+        <div>
+          <img className={img} src={bgImg} alt="laptop-guy" />
+        </div>
+        <div className="social-icons-container">
+          <TwitterIcon className="social-icon"/>
+          <LinkedInIcon className="social-icon"/>
+          <GitHubIcon className="social-icon"/>
+        </div>
+        <Button 
+          variant="contained"
+          component="span" 
+          className={button}
+          endIcon={<CloudDownloadOutlinedIcon />}
+          href="#"
+        >
+          Download resume
+        </Button>
+      </section>
+      <About />        
+      <MyProjects />
+    </main>
   );
 };
  
