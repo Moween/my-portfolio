@@ -1,9 +1,8 @@
 import Header from './components/Header';
 import Home from './pages/Home';
-import About from './components/About';
 import { Route } from 'react-router-dom';
-import { createTheme, ThemeProvider } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import './css/App.css';
 
 const theme = createTheme({
@@ -20,7 +19,12 @@ const theme = createTheme({
     h4: {
       fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
     }
-  }
+  },
+  palette: {
+    primary: {
+      main: '#ffff00',
+    },
+  },
 })
 
 function App() {
@@ -28,10 +32,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xl">
         <Header />
-        <main>
-          <Route path='/' component={Home} />
-          <About />
-        </main>
+        <Route path='/' component={Home} />
       </Container>    
     </ThemeProvider>
   );
