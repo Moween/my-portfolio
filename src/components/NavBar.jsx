@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { navItems } from '../data';
+import { NavLink } from "react-router-dom";
 import { styled } from "@material-ui/styles";
 
 const myNavBar = (props) => {
-  const { showMenu, toggleMenu } = props;
+  const { showMenu, toggleMenu } = props;  
   return (
-    <div>
+    <>
       <div className="menu">
         <div className="menu-btn" onClick={toggleMenu}>
           <div
@@ -14,38 +15,19 @@ const myNavBar = (props) => {
         </div>
         <nav className={showMenu ? "navbar open" : "navbar"}>
           <ul className={showMenu ? "menu-nav open" : "menu-nav"}>
-            <li className="menu-nav__item">
-              {/* <a href="#about" className="menu-nav_link">
-                About
-              </a> */}
-              <Link to="#/about" className="menu-nav_link">
-                About
-              </Link>
-            </li>
-            <li className="menu-nav__item">
-              <a href="#projects" className="menu-nav_link">
-                Projects
-              </a>
-            </li>
-            <li className="menu-nav__item">
-              <a href="#achievements" className="menu-nav_link">
-                Achievements
-              </a>
-            </li>
-            <li className="menu-nav__item">
-              <a href="#article" className="menu-nav_link">
-                Article
-              </a>
-            </li>
-            <li className="menu-nav__item">
-              <a href="#contact" className="menu-nav_link">
-                Contact
-              </a>
-            </li>
+            {navItems.map((link) => {
+              return (
+                <li className="menu-nav__item">
+                  <NavLink to={`/${link.path}`} className="menu-nav_link">
+                    {link.pathName}
+                  </NavLink>
+                </li>
+              );
+            })}            
           </ul>
         </nav>
       </div>
-    </div>
+    </>
   );
 };
 
