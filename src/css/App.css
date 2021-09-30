@@ -179,7 +179,7 @@ header div {
   color: #FFF124;
 }
 
-.home {
+.landing-section {
   height: 100vh;
   position: relative;
   z-index: -1;
@@ -187,24 +187,24 @@ header div {
   text-align: center;
 }
 
-.home .greeting-text {
+.landing-section .greeting-text {
   padding: 1rem;
 }
 
-.home .intro-text {
+.landing-section .intro-text {
   position: absolute;
   top: 15%;
   right: 20%;
 }
 
-.home img {
+.landing-section img {
   margin: 10px 0;
   max-width: 100%;
   width: 400px;
   height: 300px;
 }
 
-.home img:hover {
+.landing-section img:hover {
   -webkit-animation: bounce 0.5s alternate infinite;
           animation: bounce 0.5s alternate infinite;
 }
@@ -231,7 +231,7 @@ header div {
   }
 }
 
-.home .social-icons-container {
+.landing-section .social-icons-container {
   position: absolute;
   top: 37%;
   right: 5%;
@@ -251,11 +251,11 @@ header div {
   height: 150px;
 }
 
-.home .social-icons-container .social-icon {
+.landing-section .social-icons-container .social-icon {
   cursor: pointer;
 }
 
-.home .social-icons-container .social-icon:hover {
+.landing-section .social-icons-container .social-icon:hover {
   color: #FFF124;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
