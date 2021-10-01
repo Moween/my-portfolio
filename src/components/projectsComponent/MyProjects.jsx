@@ -34,9 +34,9 @@ const MyProjects = () => {
         <Typography variant="h3" component="h2" className="transparent-text">
           Projects
         </Typography>
-        <Typography className="projec-text">Projects</Typography>
+        <Typography className="project-text">Projects</Typography>
       </div>
-      {projectData.map(project => <Project key={project.id} projectData={project} />)}
+      {projectData.map((project, index) => <Project key={project.id} projectData={project} index={index} />)}
     </section>
   )
 }
