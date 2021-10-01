@@ -79,7 +79,7 @@ const About = () => {
             magnam commodi quidem, eius fuga.
           </Typography>
           <div className={imgBox}>
-            <img src={avatar} className={personalImg} alt="a_picture_of_Maureen" />
+            <img src={avatar} className={personalImg} alt="A picture of Maureen" />
           </div>
         </div>
       </article>
