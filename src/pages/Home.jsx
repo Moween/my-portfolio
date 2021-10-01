@@ -26,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
-  button: {
-    backgroundColor: '#FFF124',
-  },
-
   introText: {
     [theme.breakpoints.down('md')]: {
       right: '10%',
@@ -44,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Home = () => {
-  const { greetingText, img, button } = useStyles();
+  const { greetingText, img } = useStyles();
   return ( 
     <main>
       <section className="landing-section">
@@ -69,7 +65,6 @@ const Home = () => {
           <GitHubIcon className="social-icon"/>
         </div>
         <MyButton 
-          // className={button}
           endIcon={<CloudDownloadOutlinedIcon />}
           href="#"
           value="Download resume"
