@@ -1,17 +1,19 @@
 .project-section {
   width: 100%;
-  .headingContainer {
+  text-align: center;
+  .heading-container {
     position: relative;
-    padding: 2rem;
+    padding: 2rem 0;
     margin-bottom: 10px;
   };
   
-  .transparentText {
+  .transparent-text {
+    margin: 0;
     opacity: 0.2;
     letter-spacing: 5px;
   };
   
-  .projectText {
+  .project-text {
     position: absolute;
     top: 55%;
     right: 45%;
