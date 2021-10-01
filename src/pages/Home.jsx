@@ -3,7 +3,7 @@ import About from '../components/About';
 import MyProjects from '../components/projectsComponent/MyProjects';
 import bgImg from '../images/Avater@2x.png'
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import MyButton from '../components/MyButton';
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -68,15 +68,13 @@ const Home = () => {
           <LinkedInIcon className="social-icon"/>
           <GitHubIcon className="social-icon"/>
         </div>
-        <Button 
-          variant="contained"
-          component="span" 
-          className={button}
+        <MyButton 
+          // className={button}
           endIcon={<CloudDownloadOutlinedIcon />}
           href="#"
-        >
-          Download resume
-        </Button>
+          value="Download resume"
+          colorType="yellow"
+        />
       </section>
       <About />        
       <MyProjects />
