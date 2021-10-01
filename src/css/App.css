@@ -265,25 +265,26 @@ header div {
 
 .project-section {
   width: 100%;
+  text-align: center;
 }
 
-.project-section .headingContainer {
+.project-section .heading-container {
   position: relative;
-  padding: 2rem;
+  padding: 2rem 0;
   margin-bottom: 10px;
 }
 
-.project-section .transparentText {
+.project-section .transparent-text {
   opacity: 0.2;
   letter-spacing: 5px;
 }
 
-.project-section .projectText {
+.project-section .project-text {
   position: absolute;
   top: 55%;
   right: 45%;
   word-spacing: 10;
-  font-size: 1.45rem;
+  font-size: 1.75rem;
 }
 
 body {
