@@ -2,28 +2,9 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import avatar from "../images/personal_img.jpeg";
 import { makeStyles } from "@material-ui/styles";
+import HeadingText from './HeadingText';
 
 const useStyles = makeStyles((theme) => ({
-  aboutSection: {
-    width: "100%",
-    height: "100vh",
-    textAlign: "center",
-  },
-  headingContainer: {
-    position: "relative",
-  },
-  transparentText: {
-    opacity: 0.2,
-    // wordSpacing: .5,
-    letterSpacing: "5px",
-  },
-  aboutMeText: {
-    position: "absolute",
-    top: "55%",
-    right: "45%",
-    wordSpacing: 10,
-    fontSize: "1.45rem",
-  },
   bioInfo: {
     display: "flex",
     justifyContent: "space-between",
@@ -46,24 +27,15 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
   const {
-    aboutSection,
-    transparentText,
-    headingContainer,
-    aboutMeText,
     bioInfo,
     bio,
     imgBox,
     personalImg,
   } = useStyles();
   return (
-    <section id="about" className={aboutSection}>
+    <section id="about" className="about-section">
       <article>
-        <div className={headingContainer}>
-          <Typography variant="h3" component="h2" className={transparentText}>
-            About Me
-          </Typography>
-          <Typography className={aboutMeText}>About me</Typography>
-        </div>
+        <HeadingText text="About me" />
         <div className={bioInfo}>
           <Typography className={bio}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
