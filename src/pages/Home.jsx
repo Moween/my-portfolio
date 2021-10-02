@@ -10,6 +10,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { makeStyles } from '@material-ui/styles';
 import Achievement from '../components/Achievement';
+import Article from '../components/Article';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -75,6 +76,7 @@ const Home = () => {
       <About />        
       <MyProjects />
       <Achievement />
+      <Article />
     </main>
   );
 };
