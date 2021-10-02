@@ -16,7 +16,7 @@ const myNavBar = (props) => {
           <ul className={showMenu ? "menu-nav open" : "menu-nav"}>
             {navItems.map((link) => {
               return (
-                <li className="menu-nav__item">
+                <li className="menu-nav__item" key={link.path}>
                   <a href={link.path} className="menu-nav_link" onClick={toggleMenu} >
                     {link.pathName}
                   </a>
