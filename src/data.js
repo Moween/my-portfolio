@@ -73,4 +73,11 @@ export const navItems = [
   }
 ];
 
+export const certifications = [
+  'Google Africa Developers Scholarship 2021',
+  'FemCode Africa Front-End BootCamp June 2021',
+  'FreeCodeCamp Web Design Certificate',
+  'Lorem Ipsum dolor 2021'
+];
+
 export default projects;
