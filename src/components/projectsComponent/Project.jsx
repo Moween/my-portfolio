@@ -7,7 +7,8 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: '70vh',
+    height: '65vh',
+    position: 'relative',
     width: (props) => {
       if(props.index % 2) {
         return '100vw';
@@ -87,7 +88,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Project = (props) => {
-  console.log(props.index)
   const { imgUrl, projectOverview, title, preview } = props.projectData;
   const {  section, projectInfoCont, projectDetails, screenShot, projectInfo, imgBox } = useStyles(props);
   
