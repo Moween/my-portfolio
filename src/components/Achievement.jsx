@@ -11,8 +11,12 @@ const useStyles = makeStyles(() => ({
   },
   listItem: {
     padding: '1rem',
-    borderBottom: '1px solid #fff',
-    color: '#ffffff'
+    // borderBottom: '1px solid #fff',
+    color: '#ffffff',
+    '&:hover': {
+      animation: 'bounce 0.5s alternate 1s',
+      
+    },
   },
 }))
 
