@@ -8,7 +8,7 @@ const HeadingText = ({ text }) => {
         <Typography variant="h3" component="h2" className="transparent-text">
           {text}
         </Typography>
-        <Typography className="project-text">{text}</Typography>
+        <Typography className="normal-text">{text}</Typography>
       </div>
     </div>
   )
