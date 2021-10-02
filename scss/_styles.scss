@@ -12,11 +12,17 @@
     letter-spacing: 5px;
   };
   
-  .project-text {
+  .normal-text {
     position: absolute;
     top: 55%;
     right: 45%;
     word-spacing: 10;
     font-size: 1.75rem;
   };
+  article {
+    height: 50%;
+    line-height: 50%;
+    margin-top: auto;
+    
+  }
 };
