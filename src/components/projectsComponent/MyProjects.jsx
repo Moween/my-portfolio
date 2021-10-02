@@ -6,7 +6,7 @@ import rockPaperProjectImg from '../../images/rock-paper-scissors.png';
 import weatherProjectImg from '../../images/weather-app_img.png';
 import fashionProjectImg from '../../images/mo-fashion-store_img.png';
 import todoProjectImg from '../../images/todo_img.png';
-import Typography from '@material-ui/core/Typography';
+import HeadingText from '../HeadingText';
 
 const MyProjects = () => {
   const [projectData, setProjectData] = useState(projects);
@@ -30,12 +30,7 @@ const MyProjects = () => {
   
   return (
     <section className="project-section" id="projects">
-      <div className="heading-container">
-        <Typography variant="h3" component="h2" className="transparent-text">
-          Projects
-        </Typography>
-        <Typography className="project-text">Projects</Typography>
-      </div>
+      <HeadingText text="Projects" />
       {projectData.map((project, index) => <Project key={project.id} projectData={project} index={index} />)}
     </section>
   )
