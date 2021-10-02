@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     width: '70%',
     margin: 'auto',
   },
-  listItem: {
+  listText: {
     padding: '1rem',
     // borderBottom: '1px solid #fff',
     color: '#ffffff',
@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Achievement = () => {
-  const { list, listItem } = useStyles();
+  const { list, listText } = useStyles();
   return (
     <section className="achievement" id="achievement">
       <article>
@@ -32,7 +32,7 @@ const Achievement = () => {
               <li key={index}>
                 <Typography variant="body1" 
                   component="p" 
-                  className={listItem}
+                  className={listText}
                 >
                   {certificate}
                 </Typography>
