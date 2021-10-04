@@ -16,7 +16,7 @@ $green: #008000;
 };
 
 @mixin bounceImg {  
-  animation: bounce 0.5s alternate infinite;
+  animation: bounce 0.5s ease infinite alternate;
   @include bounceItem;
 }
 
@@ -26,7 +26,7 @@ $green: #008000;
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(0, 50px, 0);
+      transform: translate3d(0, -10px, 0);
     } 
   };
 }

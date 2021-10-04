@@ -205,8 +205,8 @@ header div {
 }
 
 .landing-section img:hover {
-  -webkit-animation: bounce 0.5s alternate infinite;
-          animation: bounce 0.5s alternate infinite;
+  -webkit-animation: bounce 0.5s ease infinite alternate;
+          animation: bounce 0.5s ease infinite alternate;
 }
 
 @-webkit-keyframes bounce {
@@ -215,8 +215,8 @@ header div {
             transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(0, 50px, 0);
-            transform: translate3d(0, 50px, 0);
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
   }
 }
 
@@ -226,8 +226,8 @@ header div {
             transform: translate3d(0, 0, 0);
   }
   to {
-    -webkit-transform: translate3d(0, 50px, 0);
-            transform: translate3d(0, 50px, 0);
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
   }
 }
 
@@ -264,38 +264,88 @@ header div {
 }
 
 .about-section,
-.project-section {
-  width: 100%;
+.achievement,
+.article-section {
   height: 100vh;
+}
+
+.about-section,
+.project-section,
+.achievement,
+.article-section {
+  width: 100%;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .about-section .heading-container,
-.project-section .heading-container {
+.project-section .heading-container,
+.achievement .heading-container,
+.article-section .heading-container {
   position: relative;
   padding: 2rem 0;
   margin-bottom: 10px;
 }
 
 .about-section .heading-container .transparent-text,
-.project-section .heading-container .transparent-text {
+.project-section .heading-container .transparent-text,
+.achievement .heading-container .transparent-text,
+.article-section .heading-container .transparent-text {
   opacity: 0.2;
   letter-spacing: 5px;
 }
 
 .about-section .heading-container .normal-text,
-.project-section .heading-container .normal-text {
+.project-section .heading-container .normal-text,
+.achievement .heading-container .normal-text,
+.article-section .heading-container .normal-text {
   position: absolute;
-  top: 55%;
+  top: 50%;
   right: 45%;
   word-spacing: 10;
   font-size: 1.75rem;
 }
 
-article {
+.about-section article,
+.project-section article,
+.achievement article,
+.article-section article {
   height: 50%;
   line-height: 50%;
   margin-top: auto;
+}
+
+#achievement {
+  position: relative;
+  background-color: #212121;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+
+#achievement .normal-text {
+  right: 35%;
+}
+
+.article-section {
+  margin: auto 0;
+  position: relative;
+}
+
+.article-section .cards__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 30%;
 }
 
 body {
