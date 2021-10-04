@@ -90,6 +90,7 @@ const Article = () => {
                       size="small"
                       color="primary"
                       href={article.previewLink}
+                      target="new"
                       className={btn}
                     >
                       Read More
