@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import { Route } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import { createTheme, ThemeProvider } from '@material-ui/core';
-import './css/App.css';
+import '../css/App.css';
 
 const theme = createTheme({
   breakpoints: {
