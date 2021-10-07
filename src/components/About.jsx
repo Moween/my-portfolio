@@ -1,29 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import avatar from "../images/personal_img.jpeg";
-import { makeStyles } from "@material-ui/styles";
 import HeadingText from './HeadingText';
-
-const useStyles = makeStyles((theme) => ({
-  bioInfo: {
-    display: "flex",
-    justifyContent: "space-between",
-    margintop: 20,
-    paddingTop: 30
-  },
-  bio: {
-    width: "50%",
-    padding: "1rem",
-  },
-  imgBox: {
-    boxShadow: '0 3px 10px rgb(50, 50, 50)',
-    width: '40%',
-  },
-  personalImg: {
-    width: '100%',
-    height: "350px",
-  },
-}));
+import { useStyles } from "../utils/styles";
 
 const About = () => {
   const {

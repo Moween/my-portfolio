@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Project from '../../components/projectsComponent/Project';
-import projects from '../../data';
+import projects from '../../utils/data';
 import sketchProjectImg from '../../images/etch-a-sketch_img.png';
 import rockPaperProjectImg from '../../images/rock-paper-scissors.png';
 import weatherProjectImg from '../../images/weather-app_img.png';

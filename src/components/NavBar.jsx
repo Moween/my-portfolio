@@ -1,5 +1,5 @@
 import React from "react";
-import { navItems } from '../data';
+import { navItems } from '../utils/data';
 import { styled } from "@material-ui/styles";
 
 const myNavBar = (props) => {
