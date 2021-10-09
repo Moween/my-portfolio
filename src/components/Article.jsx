@@ -36,7 +36,7 @@ const Article = () => {
                   alt="Random image"
                 />
                 <div className={rightBorder} />
-                <CardContent classname={cardContent}>
+                <CardContent className={cardContent}>
                   <Typography
                     gutterBottom
                     variant="h6"
