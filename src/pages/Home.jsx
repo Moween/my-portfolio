@@ -1,6 +1,4 @@
 import React from 'react';
-import About from '../components/About';
-import MyProjects from '../components/projectsComponent/MyProjects';
 import bgImg from '../images/Avater@2x.png'
 import Typography from '@material-ui/core/Typography';
 import MyButton from '../components/MyButton';
@@ -9,8 +7,11 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { makeStyles } from '@material-ui/styles';
+import About from '../components/About';
 import Achievement from '../components/Achievement';
 import Article from '../components/Article';
+import Contacts from '../components/Contacts';
+import MyProjects from '../components/projectsComponent/MyProjects';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -77,6 +78,7 @@ const Home = () => {
       <MyProjects />
       <Achievement />
       <Article />
+      <Contacts />
     </main>
   );
 };

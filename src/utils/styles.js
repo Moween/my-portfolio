@@ -23,15 +23,40 @@ export const theme = createTheme({
   },
   components: {
     MuiFormControlRoot: {
-      display: 'block',
+      display: "block",
     },
     MuiOutlinedInput: {
-      padding: '10px',
-    }
-  }
+      padding: "10px",
+    },
+  },
 });
 
 export const useStyles = makeStyles((theme) => ({
+  // Home Styles
+  greetingText: {
+    [theme.typography.h1.fontSize]: {
+      fontSize: "20rem",
+      lineHeight: "1.5rem",
+    },
+    paddingTop: "0.625rem",
+    opacity: 0.2,
+    wordSpacing: 20,
+    letterSpacing: "7px",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
+
+  introText: {
+    [theme.breakpoints.down("md")]: {
+      right: "10%",
+    },
+  },
+
+  img: {
+    [theme.breakpoints.down("sm")]: {},
+  },
+
   // About Styles
   bioInfo: {
     display: "flex",
