@@ -8,7 +8,7 @@ const About = () => {
   const {
     bioInfo,
     bio,
-    imgBox,
+    aboutImgBox,
     personalImg,
   } = useStyles();
   return (
@@ -29,7 +29,7 @@ const About = () => {
             quasi, voluptates sit ipsum dicta vitae sequi amet! Minus placeat
             magnam commodi quidem, eius fuga.
           </Typography>
-          <div className={imgBox}>
+          <div className={aboutImgBox}>
             <img src={avatar} className={personalImg} alt="Maureen" />
           </div>
         </div>
