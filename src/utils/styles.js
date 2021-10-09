@@ -1,5 +1,5 @@
-import { makeStyles } from '@material-ui/styles';
-import { createTheme } from '@material-ui/core';
+import { makeStyles } from "@material-ui/styles";
+import { createTheme } from "@material-ui/core";
 
 export const theme = createTheme({
   breakpoints: {
@@ -14,14 +14,22 @@ export const theme = createTheme({
   typography: {
     h4: {
       fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
-    }
+    },
   },
   palette: {
     primary: {
-      main: '#ffff00',
+      main: "#ffff00",
     },
   },
-})
+  components: {
+    MuiFormControlRoot: {
+      display: 'block',
+    },
+    MuiOutlinedInput: {
+      padding: '10px',
+    }
+  }
+});
 
 export const useStyles = makeStyles((theme) => ({
   // About Styles
@@ -29,190 +37,194 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     margintop: 20,
-    paddingTop: 30
+    paddingTop: 30,
   },
   bio: {
     width: "50%",
     padding: "1rem",
   },
-  imgBox: {
-    boxShadow: '0 3px 10px rgb(50, 50, 50)',
-    width: '40%',
+  aboutImgBox: {
+    boxShadow: "0 3px 10px rgb(50, 50, 50)",
+    width: "40%",
   },
   personalImg: {
-    width: '100%',
+    width: "100%",
     height: "350px",
   },
   // Achievement Styles
   certList: {
-    marginTop: '4rem',
+    marginTop: "4rem",
   },
   list: {
-    width: '70%',
-    margin: 'auto',
+    width: "70%",
+    margin: "auto",
   },
-  listItem:  {
-    borderBottom:  '1px solid #fff', 
+  listItem: {
+    borderBottom: "1px solid #fff",
   },
   listText: {
-    padding: '1rem',
-    color: '#ffffff',
-    '&:hover': {
-      animation: 'bounce .3s ease 0s alternate',      
+    padding: "1rem",
+    color: "#ffffff",
+    "&:hover": {
+      animation: "bounce .3s ease 0s alternate",
     },
   },
   // Project Styles
   section: {
     // height: '65vh',
-    position: 'relative',
+    position: "relative",
     width: (props) => {
-      if(props.index % 2) {
-        return '100vw';
-      }else {
+      if (props.index % 2) {
+        return "100vw";
+      } else {
         return null;
       }
     },
     marginLeft: (props) => {
-      if(props.index % 2) {
-        return 'calc(50% - 50vw)';
-      }else {
+      if (props.index % 2) {
+        return "calc(50% - 50vw)";
+      } else {
         return null;
       }
     },
     backgroundColor: (props) => {
-      if(props.index % 2) {
-        return '#212121';
-      }else {
+      if (props.index % 2) {
+        return "#212121";
+      } else {
         return null;
       }
     },
-    marginBottom: '2rem',
+    marginBottom: "2rem",
   },
   projectInfoCont: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection : (props) => {
-      if(props.index % 2) {
-        return 'row-reverse';
-      }else {
-        return 'row';
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: (props) => {
+      if (props.index % 2) {
+        return "row-reverse";
+      } else {
+        return "row";
       }
     },
     width: (props) => {
-      if(props.index % 2) {
-        return '84.5vw';
-      }else {
+      if (props.index % 2) {
+        return "84.5vw";
+      } else {
         return null;
       }
     },
     marginLeft: (props) => {
-      if(props.index % 2) {
-        return 'auto';
-      }else {
+      if (props.index % 2) {
+        return "auto";
+      } else {
         return null;
       }
     },
     marginRight: (props) => {
-      if(props.index % 2) {
-        return 'auto';
-      }else {
+      if (props.index % 2) {
+        return "auto";
+      } else {
         return null;
       }
     },
     // margintop: 20,
     padding: 30,
-    textAlign: 'left'
+    textAlign: "left",
   },
   projectDetails: {
-    width: '45%',
+    width: "45%",
   },
   projectInfo: {
-    padding: '1rem 0',
+    padding: "1rem 0",
   },
 
   imgBox: {
-    boxShadow: '0 2px 3px rgb(50, 50, 50)',
-    width: '45%',
-    height: '45%',
-    maxWidth: '100%',
-    borderRadius: '5px'
+    boxShadow: "0 2px 3px rgb(50, 50, 50)",
+    width: "45%",
+    height: "45%",
+    maxWidth: "100%",
+    borderRadius: "5px",
   },
   screenShot: {
-    width: '100%',
+    width: "100%",
   },
 
   //Button Components Styles
   btn: {
-    padding: '0.43rem',
+    padding: "0.43rem",
     // justifyContent: 'space-between',
-    textTransform: 'capitalize',
+    textTransform: "capitalize",
     width: (props) => {
-      if (props.colorType === 'yellow') {
-        return '180px';
+      if (props.colorType === "yellow") {
+        return "180px";
       }
     },
     backgroundColor: (props) => {
-      if (props.colorType === 'yellow') {
-        return '#f7f124';
-      }
+      return props.colorType === "yellow" ? "#f7f124" : "#000";
     },
     transition: (props) => {
-      if (props.colorType === 'yellow') {
-        return 'backgroundColor 2s ease 1s';
-      }
-      return null;
+      return props.colorType === "yellow"
+        ? "backgroundColor 2s ease 1s"
+        : "backgroundColor 2s ease 1s";
     },
-    transitionTimingFunction: 'ease',
-    transitionDelay: '1s',
-    '&:hover': {
-      backgroundColor: '#000',
-      color: '#fff',
-      border: '1px solid #f7f124',
+    transitionTimingFunction: "ease",
+    transitionDelay: "1s",
+    "&:hover": {
+      backgroundColor: (props) => {
+        return props.colorType === "yellow" ? "#000" : "#f7f124";
+      },
+      color: (props) => {
+        return props.colorType === "yellow" ? "#fff" : "#000";
+      },
+      border: (props) => {
+        return props.colorType === "yellow"
+          ? "1px solid #f7f124"
+          : "1px solid #000";
+      },
     },
   },
-
   // Article Styles
   card: {
-    alignItems: 'center',
-    backgroundColor: '#212121',
-    borderRadius: '0.3rem',
-    boxShadow: '1px 2px 3px rgb(50, 50, 50)',
-    color: '#fff',
-    display: 'flex',
-    flexDirection: 'row',
-    fontSize: '0.5rem',
-    height: '150px',
-    justifyContent: 'space-between',
-    padding: '1rem 0.321rem',
-    position: 'relative',
-    width: '45%'
+    alignItems: "center",
+    backgroundColor: "#212121",
+    borderRadius: "0.3rem",
+    boxShadow: "1px 2px 3px rgb(50, 50, 50)",
+    color: "#fff",
+    display: "flex",
+    flexDirection: "row",
+    fontSize: "0.5rem",
+    height: "150px",
+    justifyContent: "space-between",
+    padding: "1rem 0.321rem",
+    position: "relative",
+    width: "45%",
   },
   cardMedia: {
-    width: '35%',
+    width: "35%",
   },
   rightBorder: {
-    borderRight: '4px solid #fff',
+    borderRight: "4px solid #fff",
     height: 100,
     margin: 2,
     opacity: 0.5,
-    width: '5%',
+    width: "5%",
   },
   cardContent: {
-    width: '40%',
+    width: "40%",
   },
   title: {
-    fontSize: '0.875rem',
-    fontWeight: 'bold'
+    fontSize: "0.875rem",
+    fontWeight: "bold",
   },
   intro: {
-    textAlign: 'justify',
-    padding: '0.25rem',
-    fontSize: '0.75rem'
+    textAlign: "justify",
+    padding: "0.25rem",
+    fontSize: "0.75rem",
   },
   articleBtn: {
-    bottom: '5%',
-    position: 'absolute',
-    right: '5%',
-  }
+    bottom: "5%",
+    position: "absolute",
+    right: "5%",
+  },
 }));
