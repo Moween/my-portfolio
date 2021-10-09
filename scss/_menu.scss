@@ -7,83 +7,102 @@ header {
   }
 }
 
-.menu {
-  .menu-btn {
-    position: absolute;
-    z-index: 2;
-    right: 1.5rem;
-    top: 1.6rem;
-    height: 20px;
-    width: 28px;
-    cursor: pointer;
-    @include transition-ease;
-
-    &__burger {
+@media screen and (max-width: 992px) {
+  .menu {
+    .menu-btn {
       position: absolute;
-      right: 0;
-      top: 0.5rem;
+      z-index: 2;
+      right: 1.5rem;
+      top: 1.6rem;
+      height: 20px;
       width: 28px;
-      height: 3px;
-      background: $white;
-
-      &::before {
-        content: ''; 
+      cursor: pointer;
+      @include transition-ease;
+  
+      &__burger {
         position: absolute;
-        top: -8px;
+        right: 0;
+        top: 0.5rem;
         width: 28px;
         height: 3px;
         background: $white;
-        @include transition-ease;
-      }
-
-      &::after {
-        content: ''; 
-        position: absolute;
-        top: 8px;
-        width: 20px;
-        height: 3px;
-        background: $white;
-        @include transition-ease;
-      }
-
-      &.open {
-        transform: rotate(720deg);
-        background: transparent;
-
+  
         &::before {
-          transform: rotate(35deg) translate(8px, 6px);
-        } 
-        &::after {
+          content: ''; 
+          position: absolute;
+          top: -8px;
           width: 28px;
-          transform: rotate(-35deg) translate(5px, -5px);
+          height: 3px;
+          background: $white;
+          @include transition-ease;
+        }
+  
+        &::after {
+          content: ''; 
+          position: absolute;
+          top: 8px;
+          width: 20px;
+          height: 3px;
+          background: $white;
+          @include transition-ease;
+        }
+  
+        &.open {
+          transform: rotate(720deg);
+          background: transparent;
+  
+          &::before {
+            transform: rotate(35deg) translate(8px, 6px);
+          } 
+          &::after {
+            width: 28px;
+            transform: rotate(-35deg) translate(5px, -5px);
+          }
         }
       }
     }
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 1;
-    visibility: hidden;
-
-    &.open {
-      visibility: visible;
-    }
-
-    .menu-nav {
-      flex-flow: column wrap;
-      height: 100vh;
-      background-color: $black;
-      overflow: hidden;
-      @include flexItems(column, space-evenly, center);
   
-      &_item {
-        width: 40%;
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1;
+      visibility: hidden;
+  
+      &.open {
+        visibility: visible;
       }
-      
+  
+      .menu-nav {
+        flex-flow: column wrap;
+        height: 100vh;
+        background-color: $black;
+        overflow: hidden;
+        @include flexItems(column, space-evenly, center);
+    
+        &_item {
+          width: 40%;
+        }
+        
+        &_link {
+          text-decoration: none;
+          cursor: pointer;
+          color: $white;
+          padding: 0.5rem;
+          &:hover {
+            color: $yellow;
+          }
+        }
+      }
+    } 
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .menu {
+    .menu-nav {
+      @include flexItems(row, space-between, center);
       &_link {
         text-decoration: none;
         cursor: pointer;
@@ -94,7 +113,7 @@ header {
         }
       }
     }
-  } 
+  }
 }
 
 //medium screen
