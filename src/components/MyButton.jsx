@@ -8,7 +8,6 @@ const MyButton = (props) => {
   return (
     <Button
       variant="contained" 
-      // color="primary"
       className={btn}
       size="small" 
       endIcon={endIcon}
