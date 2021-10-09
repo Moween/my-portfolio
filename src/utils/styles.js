@@ -7,7 +7,7 @@ export const theme = createTheme({
       xs: 0,
       sm: 375,
       md: 768,
-      lg: 1024,
+      lg: 992,
       xl: 1140,
     },
   },
@@ -48,11 +48,12 @@ export const useStyles = makeStyles((theme) => ({
     letterSpacing: "7px",
     [theme.breakpoints.down("md")]: {
       // display: "none",
+      color: '#f7f124',
     },
   },
   introText: {
     [theme.breakpoints.down("md")]: {
-      // right: "10%",
+      width: '70%',
     },
   },  
   downloadButton: {
@@ -181,13 +182,11 @@ export const useStyles = makeStyles((theme) => ({
   btn: {
     marginTop: '10px',
     padding: "0.43rem",
-    // justifyContent: 'space-between',
     textTransform: "capitalize",
     width: (props) => {
       if (props.colorType === "yellow") {
         return "180px";
       }
-      return '37%';
     },
     backgroundColor: (props) => {
       return props.colorType === "yellow" ? "#f7f124" : "#000";
