@@ -187,9 +187,13 @@ export const useStyles = makeStyles((theme) => ({
       if (props.colorType === "yellow") {
         return "180px";
       }
+      return '37%';
     },
     backgroundColor: (props) => {
       return props.colorType === "yellow" ? "#f7f124" : "#000";
+    },
+    color: (props) => {
+      return props.colorType === "yellow" ? '#000' : '#f7f124'
     },
     transition: (props) => {
       return props.colorType === "yellow"
