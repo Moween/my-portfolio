@@ -343,12 +343,65 @@ header div {
 #contacts {
   background-color: #FFF124;
   color: #0F0F0F;
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
 }
 
 #contacts form div {
   margin: 10px auto;
+  width: 60%;
   display: block;
-  width: 50%;
+}
+
+#contacts form label {
+  color: #0F0F0F;
+  left: 17%;
+  width: 15%;
+}
+
+#contacts form input[type="text"] {
+  border-color: #0F0F0F;
+  width: inherit;
+}
+
+#contacts form textarea {
+  width: 36%;
+  background-color: #FFF124;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3%;
+}
+
+#contacts form textarea:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#contacts form textarea::-webkit-input-placeholder {
+  color: #0F0F0F;
+  position: absolute;
+  left: 6%;
+}
+
+#contacts form textarea:-ms-input-placeholder {
+  color: #0F0F0F;
+  position: absolute;
+  left: 6%;
+}
+
+#contacts form textarea::-ms-input-placeholder {
+  color: #0F0F0F;
+  position: absolute;
+  left: 6%;
+}
+
+#contacts form textarea::placeholder {
+  color: #0F0F0F;
+  position: absolute;
+  left: 6%;
+}
+
+#contacts form a {
+  width: 36%;
 }
 
 body {

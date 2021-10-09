@@ -55,9 +55,9 @@ const Contacts = () => {
           />
           <TextareaAutosize
             aria-label="minimum height"
-            minRows={3}
+            rows="3"
             placeholder="Let me hear your idea"
-            style={{ width: '50%', display: 'block' }}
+            style={{ margin: '0 auto', display: 'block' }}
             name="subject"
             value={contactDetails.subject}
             onChange={handleChange}
