@@ -12,7 +12,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    h4: {
+    h3: {
       fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
     },
   },
@@ -27,6 +27,10 @@ export const theme = createTheme({
     },
     MuiOutlinedInput: {
       padding: "10px",
+    },
+    MuiTypographyBody1: {
+      whiteSpace: 'pre',
+      fontSize: '2rem'
     },
   },
 });
@@ -43,19 +47,17 @@ export const useStyles = makeStyles((theme) => ({
     wordSpacing: 20,
     letterSpacing: "7px",
     [theme.breakpoints.down("md")]: {
-      display: "none",
+      // display: "none",
     },
   },
-
   introText: {
     [theme.breakpoints.down("md")]: {
-      right: "10%",
+      // right: "10%",
     },
+  },  
+  downloadButton: {
   },
-
-  img: {
-    [theme.breakpoints.down("sm")]: {},
-  },
+  
 
   // About Styles
   bioInfo: {
@@ -177,6 +179,7 @@ export const useStyles = makeStyles((theme) => ({
 
   //Button Components Styles
   btn: {
+    marginTop: '10px',
     padding: "0.43rem",
     // justifyContent: 'space-between',
     textTransform: "capitalize",
@@ -234,9 +237,6 @@ export const useStyles = makeStyles((theme) => ({
     margin: 2,
     opacity: 0.5,
     width: "5%",
-  },
-  cardContent: {
-    width: "40%",
   },
   title: {
     fontSize: "0.875rem",

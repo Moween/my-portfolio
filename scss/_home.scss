@@ -1,36 +1,29 @@
 .landing-section {
-  height: 100vh;
+  height: 80vh;
   position: relative;
-  z-index: -1;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   .greeting-text {
     padding: 1rem;
+    margin-top: 90px;
   }
   .intro-text {
-    position: absolute;
-    top: 15%;
-    right: 20%
-  }
-  
-  img {
-    margin: 10px 0;
-    max-width: 100%;
-    width: 400px;
-    height: 300px;
-
-    &:hover {
-      @include bounceImg;
+    width: 50%;
+    padding: 0.875rem 1rem;
+    p {
+      line-height: 1.75;
     }
   }
+
   .social-icons-container {
     position: absolute;
-    top: 37%;
-    right: 5%;
+    top: 20%;
+    right: 10%;
     @include flexItems(column, space-between, center);
     height: 150px;
     .social-icon {
       cursor: pointer;
+      color: $white;
       &:hover {
         color: $yellow;
         transform: rotate(360deg);
