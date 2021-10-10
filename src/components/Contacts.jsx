@@ -55,7 +55,7 @@ const Contacts = () => {
           />
           <TextareaAutosize
             aria-label="minimum height"
-            rows={3}
+            minRows={3}
             placeholder="Let me hear your idea"
             style={{ margin: '0 auto', display: 'block' }}
             name="subject"
