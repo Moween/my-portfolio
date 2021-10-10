@@ -7,7 +7,7 @@ import { useStyles } from "../../utils/styles";
 const Project = (props) => {
   const { imgUrl, projectOverview, title, preview } = props.projectData;
   const {
-    section,
+    projectContainer,
     projectInfoCont,
     projectDetails,
     screenShot,
@@ -16,7 +16,7 @@ const Project = (props) => {
   } = useStyles(props);
 
   return (
-    <section className={section}>
+    <div className={projectContainer}>
       <article>
         <div className={projectInfoCont}>
           <div className={imgBox}>
@@ -38,7 +38,7 @@ const Project = (props) => {
           </div>
         </div>
       </article>
-    </section>
+    </div>
   );
 };
 
