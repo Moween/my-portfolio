@@ -5,7 +5,7 @@ const HeadingText = ({ text }) => {
   return (
     <div>
       <div className="heading-container">
-        <Typography variant="h3" component="h2" className="transparent-text">
+        <Typography variant="h2" component="h2" className="transparent-text">
           {text}
         </Typography>
         <Typography className="normal-text">{text}</Typography>
