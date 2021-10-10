@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core";
+import bgImg from '../images/personal_img.jpeg'
 
 export const theme = createTheme({
   breakpoints: {
@@ -46,9 +47,7 @@ export const useStyles = makeStyles((theme) => ({
     opacity: 0.2,
     wordSpacing: 20,
     letterSpacing: "7px",
-    [theme.breakpoints.down("md")]: {
-      // display: "none",
-      color: '#f7f124',
+    [theme.breakpoints.up("md")]: {
     },
   },
   introText: {
@@ -56,27 +55,54 @@ export const useStyles = makeStyles((theme) => ({
       width: '70%',
     },
   },  
-  downloadButton: {
-  },
+
   
 
   // About Styles
   bioInfo: {
-    display: "flex",
-    justifyContent: "space-between",
-    margintop: 20,
-    paddingTop: 30,
+    display: 'block',
+    width: '100%',
+    [theme.breakpoints.between("xs", "sm")]: {
+      marginLeft: 'calc(50% - 50vw)',
+      width: '100vw',
+      position: 'relative',
+      backgroundImage: `url('${bgImg}')`,
+      backgroundRepeat: 'no repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      opacity: 0.7,
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: 'center',
+      margintop: 20,
+      paddingTop: 30,
+    },
   },
   bio: {
-    width: "50%",
     padding: "1rem",
+    [theme.breakpoints.down("sm")]: {
+      width: '90%',
+      margin: '0 auto',
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "50%",
+    },
   },
   aboutImgBox: {
     boxShadow: "0 3px 10px rgb(50, 50, 50)",
-    width: "40%",
+    [theme.breakpoints.down("md")]: {
+      display: 'none',
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: 'block',
+      width: "40%",
+    },
   },
   personalImg: {
-    width: "100%",
+    display: 'block',
+    maxWidth: "100%",
     height: "350px",
   },
   // Achievement Styles
@@ -98,7 +124,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   // Project Styles
-  section: {
+  projectContainer: {
     // height: '65vh',
     position: "relative",
     width: (props) => {
