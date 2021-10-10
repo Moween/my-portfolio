@@ -13,6 +13,9 @@ export const theme = createTheme({
     },
   },
   typography: {
+    h2: {
+      fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
+    },
     h3: {
       fontFamily: `"Lobster", "Helvetica", "Arial", sans-serif`,
     },
@@ -44,7 +47,6 @@ export const useStyles = makeStyles((theme) => ({
       lineHeight: "1.5rem",
     },
     paddingTop: "0.625rem",
-    opacity: 0.2,
     wordSpacing: 20,
     letterSpacing: "7px",
     [theme.breakpoints.up("md")]: {
@@ -81,6 +83,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   bio: {
+    textAlign: 'justify',
     padding: "1rem",
     [theme.breakpoints.down("sm")]: {
       width: '90%',
@@ -90,6 +93,21 @@ export const useStyles = makeStyles((theme) => ({
       width: "50%",
     },
   },
+  avatarContainer: {
+    display: 'none',
+    [theme.breakpoints.only("md")]: {
+      display: 'block',
+    },
+  },
+  avatarImg: {
+    float: 'right',
+    width: '250px',
+    height: '250px',
+    borderColor: '#f7f124',
+    borderStyle: 'solid',
+    borderRadius: '50%',
+    borderWidth: 4,
+  },  
   aboutImgBox: {
     boxShadow: "0 3px 10px rgb(50, 50, 50)",
     [theme.breakpoints.down("md")]: {
