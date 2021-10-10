@@ -1,6 +1,4 @@
 import React from "react";
-import { articles } from "../utils/data";
-import HeadingText from "./HeadingText";
 import laptopImg from "../images/laptop&code.jpg";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -8,6 +6,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import { Button, CardActions } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "../utils/styles";
+
+import { articles } from "../utils/data";
+import HeadingText from "./HeadingText";
 
 const Article = () => {
   const {
