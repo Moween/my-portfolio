@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "@material-ui/styles"; // For mediaquery
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import CloudDownloadOutlinedIcon from "@material-ui/icons/CloudDownloadOutlined";
@@ -15,7 +16,8 @@ import MyButton from "../components/MyButton";
 import MyProjects from "../components/projectsComponent/MyProjects";
 
 const Home = () => {
-  const { greetingText } = useStyles;
+  const theme = useTheme();
+  const { greetingText } = useStyles(theme);
   return (
     <main>
       <section className="landing-section">
@@ -27,21 +29,13 @@ const Home = () => {
             className={greetingText}
           >
             Front-end developer
-          <Typography variant="h5" >
-            (ReactJS)
           </Typography>
-          </Typography>
+          <Typography variant="h6">(ReactJS)</Typography>
         </div>
         <div className="intro-text">
           <Typography variant="body1">
             Hi! I'm {' '}
-            <Typography
-              variant="body1"
-              style={{ color: "#cb6036" }}
-              component="span"
-              >
-              Maureen Ezeilo
-            </Typography>
+            <span style={{ color: "#cb6036" }}>Maureen Ezeilo</span>
             .  An enthusiastic front-end developer based in Nigeria.
             Who believes in making the world a beautiful place with a beautiful website...
           </Typography>
