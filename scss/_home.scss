@@ -2,25 +2,21 @@
   height: 80vh;
   position: relative;
   width: 100%;
-  // text-align: center;
+  text-align: center;
   .greeting-text {
-    padding: 1rem;
     margin-top: 90px;
+    h5 {
+      font-size: 1rem;
+    }
   }
   .intro-text {
-    width: 50%;
     padding: 0.875rem 1rem;
     p {
       line-height: 1.75;
     }
   }
-
   .social-icons-container {
-    position: absolute;
-    top: 20%;
-    right: 10.5%;
-    @include flexItems(column, space-between, center);
-    height: 150px;
+    @include flexItems(row, center, center);
     .social-icon {
       cursor: pointer;
       color: $white;
@@ -29,6 +25,28 @@
         transform: rotate(360deg);
         @include transition-ease;      
       }
+    }
+  }  
+}
+
+@media screen and (min-width: 768px) {
+  .landing-section{
+    text-align: left;
+    .greeting-text {
+      padding: 1rem;
+      h5 {
+        font-size: 1.5rem;
+      }
+    }
+    .intro-text {
+      width: 50%;
+    }
+    .social-icons-container {
+      position: absolute;
+      top: 20%;
+      right: 10.5%;
+      @include flexItems(column, space-between, center);
+      height: 150px;      
     }
   }
 }
