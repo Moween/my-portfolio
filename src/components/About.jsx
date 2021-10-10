@@ -1,16 +1,18 @@
 import React from "react";
+import { useTheme } from "@material-ui/styles"; // For mediaquery
 import Typography from "@material-ui/core/Typography";
-import avatar from "../images/personal_img.jpeg";
+import img from "../images/personal_img.jpeg";
 import HeadingText from './HeadingText';
 import { useStyles } from "../utils/styles";
 
 const About = () => {
+  const theme = useTheme();
   const {
     bioInfo,
     bio,
     aboutImgBox,
     personalImg,
-  } = useStyles();
+  } = useStyles(theme);
   return (
     <section id="about" className="about-section">
       <article>
@@ -30,7 +32,7 @@ const About = () => {
             magnam commodi quidem, eius fuga.
           </Typography>
           <div className={aboutImgBox}>
-            <img src={avatar} className={personalImg} alt="Maureen" />
+            <img src={img} className={personalImg} alt="Maureen" />
           </div>
         </div>
       </article>
