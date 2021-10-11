@@ -29,7 +29,7 @@ const Header = () => {
     <header>
         {!showMenu && <Typography className={brandLogo} variant="h5" component="h3">
           <Link to='/' className={brandLogoText}>
-            Maureen
+            Orbie
           </Link>
         </Typography> }       
         <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
