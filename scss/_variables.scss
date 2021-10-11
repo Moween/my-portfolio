@@ -1,0 +1,32 @@
+$black: #0F0F0F;
+$brown: #212121;
+$yellow: #FFF124;
+$white: #FFFFFF;
+$green: #008000;
+
+@mixin flexItems($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+};
+
+@mixin bounceImg {  
+  animation: bounce 0.5s ease infinite alternate;
+  @include bounceItem;
+}
+
+@mixin bounceItem {
+  @keyframes bounce {
+    from { 
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, -10px, 0);
+    } 
+  };
+}

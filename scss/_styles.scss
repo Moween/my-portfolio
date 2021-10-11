@@ -1,0 +1,158 @@
+.about-section,
+.achievement,
+.article-section,
+.contact-section {
+  height: 100vh;
+}
+
+.about-section,
+.project-section,
+.achievement,
+.article-section,
+.contact-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+  .heading-container {
+    position: relative;
+    padding: 2rem 0;
+    margin-bottom: 10px;
+    .transparent-text {
+      opacity: 0.2;
+      letter-spacing: 3px;
+      font-size: 1.5rem;
+    }
+    .normal-text {
+      position: absolute;
+      top: 47%;
+      right: 15%;
+      width: 70%;
+      word-spacing: 10;
+      font-size: 1.25rem;
+    }
+  }
+  article {
+    line-height: 50%;
+    margin-top: auto;
+  }
+}
+
+#about {
+  margin-top: auto;
+}
+
+#achievement {
+  position: relative;
+  background-color: #212121;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  ul {
+    width: 80%;
+  }
+}
+
+#contacts {
+  background-color: $yellow;
+  color: $black;
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  form {
+    div {
+      margin: 10px auto;
+      width: 70%;
+      display: block;
+    }
+    label {
+      color: $black;
+      left: 17%;
+      width: 15%;
+    }
+    input[type="text"] {
+      border-color: $black;
+      width: inherit;
+    }
+    textarea {
+      width: 49%;
+      background-color: $yellow;
+      border-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3%;
+      &:focus {
+        outline: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      &::placeholder {
+        color: $black;
+        position: absolute;
+        left: 11%;
+      }
+    }
+    a {
+      width: 49%;
+    }
+  }
+}
+
+// medium screens and above
+
+@media screen and (min-width: 768px) {
+  .about-section,
+  .project-section,
+  .achievement,
+  .article-section,
+  .contact-section {
+    .heading-container {
+      position: relative;
+      padding: 2rem 0;
+      margin-bottom: 10px;
+      .transparent-text {
+        letter-spacing: 5px;
+        font-size: 3rem;
+      }
+      .normal-text {
+        font-size: 1.75rem;
+      }
+    }
+    article {
+      line-height: 50%;
+      margin-top: auto;
+    }
+  }
+  .about-section {
+    article {
+      height: 100vh;
+    }
+  }
+
+  #achievement {
+    ul {
+      width: 70%;
+    }
+  }
+
+  .article-section {
+    margin: auto 0;
+    position: relative;
+    .cards__box {
+      @include flexItems(row, space-around, center);
+      position: absolute;
+      top: 30%;
+    }
+  }
+
+  #contacts {
+    form {
+      div {
+        width: 60%;
+      }
+      textarea {
+        width: 36%;
+        &::placeholder {
+          left: 6%;
+        }
+      }
+      a {
+        width: 36%;
+      }
+    }
+  }
+}
