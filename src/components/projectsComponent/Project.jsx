@@ -10,6 +10,7 @@ const Project = (props) => {
     projectContainer,
     projectInfoCont,
     projectDetails,
+    projectTitle,
     screenShot,
     projectInfo,
     imgBox,
@@ -23,7 +24,7 @@ const Project = (props) => {
             <img src={imgUrl} className={screenShot} alt="project" />
           </div>
           <div className={projectDetails}>
-            <Typography variant="h4" component="h3">
+            <Typography variant="h4" component="h3" className={projectTitle}>
               {title}
             </Typography>
             <Typography variant="body1" component="p" className={projectInfo}>
