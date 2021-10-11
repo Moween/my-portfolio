@@ -200,15 +200,18 @@ header div {
   height: 80vh;
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 .landing-section .greeting-text {
-  padding: 1rem;
   margin-top: 90px;
 }
 
+.landing-section .greeting-text h5 {
+  font-size: 1rem;
+}
+
 .landing-section .intro-text {
-  width: 50%;
   padding: 0.875rem 1rem;
 }
 
@@ -217,23 +220,19 @@ header div {
 }
 
 .landing-section .social-icons-container {
-  position: absolute;
-  top: 20%;
-  right: 10.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 150px;
 }
 
 .landing-section .social-icons-container .social-icon {
@@ -247,6 +246,40 @@ header div {
           transform: rotate(360deg);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-section {
+    text-align: left;
+  }
+  .landing-section .greeting-text {
+    padding: 1rem;
+  }
+  .landing-section .greeting-text h5 {
+    font-size: 1.5rem;
+  }
+  .landing-section .intro-text {
+    width: 50%;
+  }
+  .landing-section .social-icons-container {
+    position: absolute;
+    top: 20%;
+    right: 10.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 150px;
+  }
 }
 
 .about-section,
@@ -282,7 +315,8 @@ header div {
 .article-section .heading-container .transparent-text,
 .contact-section .heading-container .transparent-text {
   opacity: 0.2;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
 }
 
 .about-section .heading-container .normal-text,
@@ -291,10 +325,11 @@ header div {
 .article-section .heading-container .normal-text,
 .contact-section .heading-container .normal-text {
   position: absolute;
-  top: 50%;
-  right: 45%;
+  top: 47%;
+  right: 15%;
+  width: 70%;
   word-spacing: 10;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .about-section article,
@@ -302,7 +337,6 @@ header div {
 .achievement article,
 .article-section article,
 .contact-section article {
-  height: 50%;
   line-height: 50%;
   margin-top: auto;
 }
@@ -314,30 +348,8 @@ header div {
   width: 100vw;
 }
 
-#achievement .normal-text {
-  right: 35%;
-}
-
-.article-section {
-  margin: auto 0;
-  position: relative;
-}
-
-.article-section .cards__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 30%;
+#achievement ul {
+  width: 80%;
 }
 
 #contacts {
@@ -350,7 +362,7 @@ header div {
 
 #contacts form div {
   margin: 10px auto;
-  width: 60%;
+  width: 70%;
   display: block;
 }
 
@@ -366,7 +378,7 @@ header div {
 }
 
 #contacts form textarea {
-  width: 36%;
+  width: 49%;
   background-color: #FFF124;
   border-color: rgba(0, 0, 0, 0.2);
   border-radius: 3%;
@@ -379,29 +391,111 @@ header div {
 #contacts form textarea::-webkit-input-placeholder {
   color: #0F0F0F;
   position: absolute;
-  left: 6%;
+  left: 11%;
 }
 
 #contacts form textarea:-ms-input-placeholder {
   color: #0F0F0F;
   position: absolute;
-  left: 6%;
+  left: 11%;
 }
 
 #contacts form textarea::-ms-input-placeholder {
   color: #0F0F0F;
   position: absolute;
-  left: 6%;
+  left: 11%;
 }
 
 #contacts form textarea::placeholder {
   color: #0F0F0F;
   position: absolute;
-  left: 6%;
+  left: 11%;
 }
 
 #contacts form a {
-  width: 36%;
+  width: 49%;
+}
+
+@media screen and (min-width: 768px) {
+  .about-section .heading-container,
+  .project-section .heading-container,
+  .achievement .heading-container,
+  .article-section .heading-container,
+  .contact-section .heading-container {
+    position: relative;
+    padding: 2rem 0;
+    margin-bottom: 10px;
+  }
+  .about-section .heading-container .transparent-text,
+  .project-section .heading-container .transparent-text,
+  .achievement .heading-container .transparent-text,
+  .article-section .heading-container .transparent-text,
+  .contact-section .heading-container .transparent-text {
+    letter-spacing: 5px;
+    font-size: 3rem;
+  }
+  .about-section .heading-container .normal-text,
+  .project-section .heading-container .normal-text,
+  .achievement .heading-container .normal-text,
+  .article-section .heading-container .normal-text,
+  .contact-section .heading-container .normal-text {
+    font-size: 1.75rem;
+  }
+  .about-section article,
+  .project-section article,
+  .achievement article,
+  .article-section article,
+  .contact-section article {
+    line-height: 50%;
+    margin-top: auto;
+  }
+  .about-section article {
+    height: 100vh;
+  }
+  #achievement ul {
+    width: 70%;
+  }
+  .article-section {
+    margin: auto 0;
+    position: relative;
+  }
+  .article-section .cards__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 30%;
+  }
+  #contacts form div {
+    width: 60%;
+  }
+  #contacts form textarea {
+    width: 36%;
+  }
+  #contacts form textarea::-webkit-input-placeholder {
+    left: 6%;
+  }
+  #contacts form textarea:-ms-input-placeholder {
+    left: 6%;
+  }
+  #contacts form textarea::-ms-input-placeholder {
+    left: 6%;
+  }
+  #contacts form textarea::placeholder {
+    left: 6%;
+  }
+  #contacts form a {
+    width: 36%;
+  }
 }
 
 body {
