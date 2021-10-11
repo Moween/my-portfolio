@@ -27,7 +27,7 @@ const About = () => {
             to know more about data. so I decided to check on youtube, I found
             out about SQL blah blah.... from SQL I started watching{" "}
             <abbr title="HyperText Markup Language">HTML</abbr> videos. <br />
-            Fast track to January 2021, my curiosity about how the web works
+            My curiosity about how the web works
             made my transition into the tech industry. The last months have been
             very intense as I have honed my skills in HTML, CSS, JavaScript,
             ReactJS, Git, and modern front-end web tools. I am a self-taught
