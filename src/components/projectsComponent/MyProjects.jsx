@@ -15,7 +15,7 @@ const MyProjects = () => {
     todoProjectImg,
     rockPaperProjectImg,
     fashionProjectImg,
-    sketchProjectImg
+    sketchProjectImg,
   ];
 
   useEffect(() => {
@@ -25,15 +25,17 @@ const MyProjects = () => {
         return project;
       });
       return projects;
-    });    
+    });
   }, []);
-  
+
   return (
     <section className="project-section" id="projects">
       <HeadingText text="Projects" />
-      {projectData.map((project, index) => <Project key={project.id} projectData={project} index={index} />)}
+      {projectData.map((project, index) => (
+        <Project key={project.id} projectData={project} index={index} />
+      ))}
     </section>
-  )
+  );
 }
 
 export default MyProjects;
