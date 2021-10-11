@@ -11,6 +11,6 @@
 
 👤 **Obiageli Ezeilo**
 
-- Github: [@oween](https://github.com/Moween)
+- Github: [@Moween](https://github.com/Moween)
 - Twitter: [@iamMoween](https://twitter.com/iamMoweem)
 - Linkedin: [Obiageli Ezeilo](https://www.linkedin.com/in/obiageli-ezeilo-0301ba152/)
