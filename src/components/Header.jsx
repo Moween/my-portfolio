@@ -11,6 +11,9 @@ const useStyles = makeStyles({
   brandLogoText: {
     color: '#fff',
     textDecoration: 'none',
+    '&:hover': {
+      color: '#f7f124',
+    },
   }
 });
 
