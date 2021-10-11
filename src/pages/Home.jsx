@@ -35,7 +35,7 @@ const Home = () => {
         <div className="intro-text">
           <Typography variant="body1">
             Hi! I'm {' '}
-            <span style={{ color: "#cb6036" }}>Maureen Ezeilo</span>
+            <span style={{ color: "#cb6036" }}>Obiageli Maureen Ezeilo</span>
             .  An enthusiastic front-end developer based in Nigeria.
             Who believes in making the world a beautiful place with a beautiful website...
           </Typography>
