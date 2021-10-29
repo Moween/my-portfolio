@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core";
-import bgImg from "../images/personal_img.jpeg";
 
 export const theme = createTheme({
   breakpoints: {
@@ -65,10 +64,6 @@ export const useStyles = makeStyles((theme) => ({
       marginLeft: "calc(50% - 50vw)",
       width: "100vw",
       position: "relative",
-      backgroundImage: `url('${bgImg}')`,
-      backgroundRepeat: "no repeat",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
       opacity: 0.9,
     },
     [theme.breakpoints.up("lg")]: {
