@@ -2,8 +2,7 @@ import React from "react";
 import { navItems } from '../utils/data';
 import { styled } from "@material-ui/styles";
 
-const myNavBar = (props) => {
-  const { showMenu, toggleMenu } = props;  
+const myNavBar = ({ showMenu, toggleMenu }) => { 
   return (
     <>
       <div className="menu">

@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Typography from '@material-ui/core/Typography';
@@ -18,11 +19,14 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
+  const isMobile = useMediaQuery({ query: `{max-width: 991px}`})
   const { brandLogo, brandLogoText } = useStyles();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu((prevState) => !prevState);
+    if(isMobile) {
+      setShowMenu((prevState) => !prevState);
+    }
   };
 
   return ( 
