@@ -46,7 +46,7 @@ export const useStyles = makeStyles((theme) => ({
     wordSpacing: 20,
     letterSpacing: "7px",
     [theme.breakpoints.down("sm")]: {
-      fontSize: '1.75rem',
+      fontSize: '1.5rem',
     },
   },
   introText: {
