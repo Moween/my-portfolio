@@ -26,6 +26,7 @@ const MyProjects = () => {
       });
       return projects;
     });
+    //eslint-disable-next-line
   }, []);
 
   return (
