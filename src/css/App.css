@@ -48,6 +48,72 @@ table {
   border-spacing: 0;
 }
 
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #1B5FC7;
+  }
+}
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #1B5FC7;
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 header {
   width: 100%;
   padding: 1.25rem;
@@ -341,6 +407,10 @@ header div {
   margin-top: auto;
 }
 
+#about {
+  margin-top: auto;
+}
+
 #achievement {
   position: relative;
   background-color: #212121;
@@ -496,6 +566,28 @@ header div {
   #contacts form a {
     width: 36%;
   }
+}
+
+.typewriting {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #1B5FC7;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+          animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+}
+
+.wave {
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-animation: wave 1s ease-in infinite;
+          animation: wave 1s ease-in infinite;
 }
 
 body {
