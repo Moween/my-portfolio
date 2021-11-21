@@ -7,7 +7,7 @@ import { useStyles } from '../utils/styles';
 
 const About = () => {
   const theme = useTheme();
-  const { avatarContainer, avatarImg, bioInfo, bio, aboutImgBox, personalImg } =
+  const { bioInfo, bio, aboutImgBox, personalImg } =
     useStyles(theme);
   return (
     <section id="about" className="about-section">

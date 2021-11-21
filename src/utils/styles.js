@@ -87,32 +87,22 @@ export const useStyles = makeStyles((theme) => ({
       lineHeight: 2,
     },
   },
-  avatarContainer: {
-    display: "none",
-    [theme.breakpoints.only("md")]: {
-      display: "block",
-    },
-  },
-  avatarImg: {
-    float: "right",
-    width: "250px",
-    height: "250px",
-    borderColor: "#f7f124",
-    borderStyle: "solid",
-    borderRadius: "50%",
-    borderWidth: 4,
-  },
   aboutImgBox: {
-    boxShadow: "0 3px 10px rgb(50, 50, 50)",
+    // boxShadow: "0 3px 10px rgb(50, 50, 50)",
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
     [theme.breakpoints.up("lg")]: {
       display: "block",
-      width: "40%",
+      width: "30%",
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: '#f7f124',
+      borderTopRightRadius: '150px'
     },
   },
   personalImg: {
+    width: '100%',
     display: "block",
     maxWidth: "100%",
     height: "350px",
