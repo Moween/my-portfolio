@@ -367,4 +367,14 @@ export const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: "5%",
   },
+
+  //Footer
+  footer: {
+    width: '100%',
+    height: '15vh',
+    [theme.breakpoints.up('lg')]: {
+      height: '10vh',
+    },
+    backgroundColor: '#0F0F0F'
+  }
 }));

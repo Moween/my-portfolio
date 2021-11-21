@@ -266,11 +266,12 @@ header div {
   height: 80vh;
   position: relative;
   width: 100%;
-  text-align: center;
+  text-align: justify;
 }
 
 .landing-section .greeting-text {
-  margin-top: 90px;
+  padding: 0.875rem 1rem;
+  margin-top: 40px;
 }
 
 .landing-section .greeting-text h5 {
@@ -285,7 +286,7 @@ header div {
   line-height: 1.75;
 }
 
-.landing-section .social-icons-container {
+.social-icons-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,12 +302,12 @@ header div {
           align-items: center;
 }
 
-.landing-section .social-icons-container .social-icon {
+.social-icons-container .social-icon {
   cursor: pointer;
   color: #FFFFFF;
 }
 
-.landing-section .social-icons-container .social-icon:hover {
+.social-icons-container .social-icon:hover {
   color: #FFF124;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -319,6 +320,7 @@ header div {
     text-align: left;
   }
   .landing-section .greeting-text {
+    margin-top: 90px;
     padding: 1rem;
   }
   .landing-section .greeting-text h5 {
@@ -427,6 +429,7 @@ header div {
   color: #0F0F0F;
   position: relative;
   margin-left: calc(50% - 50vw);
+  margin-bottom: 0;
   width: 100vw;
 }
 
@@ -484,6 +487,44 @@ header div {
 
 #contacts form a {
   width: 49%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.typewriting {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #1B5FC7;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+          animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+}
+
+.wave {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  -webkit-animation: wave 1s ease-in infinite;
+          animation: wave 1s ease-in infinite;
 }
 
 @media screen and (min-width: 768px) {
@@ -566,28 +607,21 @@ header div {
   #contacts form a {
     width: 36%;
   }
-}
-
-.typewriting {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #1B5FC7;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em;
-  /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
-          animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
-}
-
-.wave {
-  width: 1.25rem;
-  height: 1.25rem;
-  -webkit-animation: wave 1s ease-in infinite;
-          animation: wave 1s ease-in infinite;
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 body {

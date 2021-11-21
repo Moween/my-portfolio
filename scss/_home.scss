@@ -2,9 +2,10 @@
   height: 80vh;
   position: relative;
   width: 100%;
-  text-align: center;
+  text-align: justify;
   .greeting-text {
-    margin-top: 90px;
+    padding: 0.875rem 1rem;
+    margin-top: 40px;
     h5 {
       font-size: 1rem;
     }
@@ -15,24 +16,26 @@
       line-height: 1.75;
     }
   }
-  .social-icons-container {
-    @include flexItems(row, center, center);
-    .social-icon {
-      cursor: pointer;
-      color: $white;
-      &:hover {
-        color: $yellow;
-        transform: rotate(360deg);
-        @include transition-ease;      
-      }
-    }
-  }  
 }
+
+.social-icons-container {
+  @include flexItems(row, center, center);
+  .social-icon {
+    cursor: pointer;
+    color: $white;
+    &:hover {
+      color: $yellow;
+      transform: rotate(360deg);
+      @include transition-ease; 
+    }
+  }
+}  
 
 @media screen and (min-width: 768px) {
   .landing-section{
     text-align: left;
     .greeting-text {
+      margin-top: 90px;
       padding: 1rem;
       h5 {
         font-size: 1.5rem;
