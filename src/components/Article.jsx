@@ -1,5 +1,5 @@
 import React from "react";
-import laptopImg from "../images/laptop&code.jpg";
+import Box from '@material-ui/core/Box';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -7,6 +7,7 @@ import { Button, CardActions } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "../utils/styles";
 
+import laptopImg from "../images/laptop&code.jpg";
 import { articles } from "../utils/data";
 import HeadingText from "./HeadingText";
 
@@ -21,10 +22,10 @@ const Article = () => {
     articleBtn,
   } = useStyles();
   return (
-    <section className="article-section" id="article">
-      <article>
+    <Box component="section" className="article-section" id="article">
+      <Box component="article">
         <HeadingText text="Articles" />
-        <div className="cards__box">
+        <Box className="cards__box">
           {articles.map((article) => {
             article.coverImg = laptopImg;
             return (
@@ -65,9 +66,9 @@ const Article = () => {
               </Card>
             );
           })}
-        </div>
-      </article>
-    </section>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,36 +1,43 @@
-import React from 'react'
+import React from 'react';
+import Box from '@material-ui/core/Box';
+import List  from '@material-ui/core/List';
+import ListItem  from '@material-ui/core/ListItem';
+import ListItemText  from '@material-ui/core/ListItemText';
+
+
 import HeadingText from './HeadingText';
-import Typography from '@material-ui/core/Typography';
 import { certifications } from '../utils/data';
-import { useStyles } from "../utils/styles";
+import { useStyles } from '../utils/styles';
 
 const Achievement = () => {
   const { list, listItem, listText, certList } = useStyles();
   return (
-    <section className="achievement" id="achievement">
-      <article>
+    <Box component="section" className="achievement" id="achievement">
+      <Box component="article">
         <HeadingText text="Trainings and Certifications" />
-        <div className={certList}>
-          <ul className={list}>
+        <Box className={certList}>
+          <List className={list}>
             <hr />
             {certifications.map((certificate, index) => (
-              <li key={index} className={listItem}>
-                <Typography variant="body1" 
-                  component="p" 
+              <ListItem key={index} className={listItem}>
+                <ListItemText
                   className={listText}
-                >
-                  {certificate}
-                </Typography>
-              </li>
-              ))
-          }           
-          </ul>
-        </div>
-      </article>
-      
-    </section>
-    
-  )
-}
+                  primary={certificate}
+                  sx={{
+                    [`& .MuiListitemText-primary`]: {
+                      '&:hover': {
+                        animation: 'bounce .3s ease 0s alternate',
+                      },
+                    },
+                  }}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
 
 export default Achievement;
