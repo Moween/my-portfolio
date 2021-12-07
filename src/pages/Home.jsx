@@ -13,6 +13,7 @@ import Contacts from '../components/Contacts';
 import MyButton from '../components/MyButton';
 import MyProjects from '../components/projectsComponent/MyProjects';
 import SocialIcons from '../components/SocialIcons';
+import ScrollButton from '../components/ScrollButton';
 
 const Home = () => {
   const theme = useTheme();
@@ -58,6 +59,7 @@ const Home = () => {
       <Achievement />
       <Article />
       <Contacts />
+      <ScrollButton />
     </Box>
   );
 };
