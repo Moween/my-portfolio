@@ -93,4 +93,21 @@ export const articles = [
   },
 ];
 
+export const contactMeans = [
+  {
+    action: 'Call',
+    details: '+23408039291998'
+  },
+  {
+    action: 'Email',
+    details: 'moween1998@gmail.com'
+  },
+  {
+    action: 'Location',
+    details: 'Remote - Africa'
+  },
+]
+
 export default projects;
+
+
