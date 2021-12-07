@@ -15,15 +15,33 @@ const About = () => {
       <Box component="article">
         <HeadingText text="About me" />
         <Box className={bioInfo}>
-          <Typography className={bio} variant="body1">
-            I am a self-taught Front-end web developer, and an enthusiatic
-            JavaScript lover, a problem-solver, and a team player with a strong
-            desire to learn. My curiosity about how the web works made my
-            transition into the tech industry. Adept at using HTML, CSS,
-            JavaScript, ReactJS, Git, and modern front-end web tools to produce
-            clean code. When I am not coding, you'll find me outdoors or
-            catching up with my favorite tv shows.
-          </Typography>
+          <Box className={bio}>
+            <Typography variant="body1">
+              I am a self-taught Front-end web developer, and an enthusiatic
+              JavaScript lover who turns static web designs into functional,
+              scalable and optimized web applications..My curiosity about how
+              the web works made my transition into the tech industry. When I am
+              not coding, you'll find me outdoors or catching up with my
+              favorite tv shows.
+            </Typography>
+            <Box sx={{ mt: '1rem' }}>
+              <Typography variant="h6" component="h6">
+                Languages
+              </Typography>
+              <Typography>
+                JavaScript | ReactJS | Redux | React Hooks | Material-UI |
+                Bootstrap | HTML | CSS
+              </Typography>
+            </Box>
+            <Box sx={{ mt: '1rem' }}>
+              <Typography variant="h6" component="h6">
+                Skills
+              </Typography>
+              <Typography>
+                Git Workflow, Pair programming, team playing, problem solving
+              </Typography>
+            </Box>
+          </Box>
           <Box className={aboutImgBox}>
             <img src={img} className={personalImg} alt="Maureen" />
           </Box>
