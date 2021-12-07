@@ -1,44 +1,35 @@
-import React, { useState} from 'react';
-import { useMediaQuery } from 'react-responsive';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles({
-  brandLogo: {
-    width: '25%',
-  },
-  brandLogoText: {
-    color: '#fff',
-    textDecoration: 'none',
-    '&:hover': {
-      color: '#f7f124',
-    },
-  }
-});
+import { useStyles } from '../utils/styles';
+import NavBar from './NavBar';
+import { MediaQueryContext } from './App';
 
 const Header = () => {
-  const isMobile = useMediaQuery({ query: `{max-width: 991px}`})
+  const { mobile, tablet } = useContext(MediaQueryContext);
   const { brandLogo, brandLogoText } = useStyles();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    if(isMobile) {
+    if (mobile || tablet) {
       setShowMenu((prevState) => !prevState);
     }
   };
 
-  return ( 
-    <header>
-        {!showMenu && <Typography className={brandLogo} variant="h5" component="h3">
-          <Link to='/' className={brandLogoText}>
+  return (
+    <Box component="header">
+      {!showMenu && (
+        <Typography className={brandLogo} variant="h5" component="h3">
+          <Link to="/" className={brandLogoText}>
             Orbie
           </Link>
-        </Typography> }       
-        <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
-    </header> 
+        </Typography>
+      )}
+      <NavBar showMenu={showMenu} toggleMenu={toggleMenu} />
+    </Box>
   );
-}
- 
+};
+
 export default Header;
