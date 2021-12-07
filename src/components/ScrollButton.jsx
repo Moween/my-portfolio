@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Fab from '@mui/material/Fab';
-import UpIcon from '@mui/icons-material/KeyboardArrowUp';
+import UpIcon from '@material-ui/icons/KeyboardArrowUp';
+
+import { MediaQueryContext } from './App';
 
 const ScrollButton = () => {
+  const { mobile, tablet } = useContext(MediaQueryContext);
   const [isVisible, setIsVisible] = useState(false);
+
+  const fabStyle = {
+    position: 'fixed',
+    bottom: 100,
+    right: 10,
+    zIndex: 1,
+  };
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
@@ -26,13 +36,19 @@ const ScrollButton = () => {
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
-  }, []);
+  }, [isVisible]);
 
   return (
     <Fab
       aria-label="scroll-button"
       onClick={scrollToTop}
-      sx={isVisible ? { opacity: 1 } :{ opacity: 0 }}
+      size={mobile || tablet ? 'medium' : 'large'}
+      sx={
+        {
+          opacity: isVisible ? 1 : 0,
+          ...fabStyle,
+        }
+      }
     >
       <UpIcon />
     </Fab>
