@@ -10,14 +10,12 @@ import { certifications } from '../utils/data';
 import { useStyles } from '../utils/styles';
 
 const Achievement = () => {
-  const { list, listItem, listText, certList } = useStyles();
+  const { list, listItem, listText } = useStyles();
   return (
     <Box component="section" className="achievement" id="achievement">
       <Box component="article">
         <HeadingText text="Trainings and Certifications" />
-        <Box className={certList}>
           <List className={list}>
-            <hr />
             {certifications.map((certificate, index) => (
               <ListItem key={index} className={listItem}>
                 <ListItemText
@@ -34,7 +32,6 @@ const Achievement = () => {
               </ListItem>
             ))}
           </List>
-        </Box>
       </Box>
     </Box>
   );

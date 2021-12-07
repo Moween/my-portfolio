@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -6,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const SocialIcons = () => {
   return (
-    <div className="social-icons-container">
+    <Box className="social-icons-container">
       <Button
         className="social-icon"
         href="https://www.twitter.com/iam_Moween"
@@ -28,7 +29,7 @@ const SocialIcons = () => {
       >
         <GitHubIcon className="social-icon" />
       </Button>
-    </div>
+    </Box>
   );
 };
 
