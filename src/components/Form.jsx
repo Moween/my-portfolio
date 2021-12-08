@@ -1,27 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import Box from '@material-ui/core/Box';
-import TextField from '@material-ui/core/TextField';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import TextField from '@mui/material/TextField';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+
 import MyButton from './MyButton';
+import Validation from './Validation';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-  });
-
-  const handleChange = ({ target: input }) => {
-    const { name, value } = input;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = () => {};
-
+  const formik = Validation();
   return (
     <Box
       component="form"
@@ -32,43 +19,47 @@ const ContactForm = () => {
         display: 'flex',
         flexDirection: 'column',
       }}
-      noValidate
-      onSubmit={handleSubmit}
+      onSubmit={formik.handleSubmit}
       autoComplete="off"
     >
       <TextField
-        id="outlined-basic"
+        fullWidth
+        id="name"
         label="Name"
+        name="name"
+        value={formik.values.name}
+        onChange={formik.handleChange}
         variant="outlined"
         margin="normal"
-        fullWidth
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
+        error={formik.touched.name && Boolean(formik.errors.name)}
+        helperText={formik.touched.name && formik.errors.name}
       />
       <TextField
-        id="outlined-basic"
+        id="email"
         label="Email"
         variant="outlined"
         margin="normal"
         name="email"
-        value={formData.email}
-        onChange={handleChange}
+        value={formik.values.email}
+        onChange={formik.handleChange}
+        error={formik.touched.email && Boolean(formik.errors.email)}
+        helperText={formik.touched.email && formik.errors.email}
       />
-      <TextareaAutosize
-        aria-label="minimum height"
-        minRows={3}
-        placeholder="Let me hear your idea"
-        name="subject"
-        value={formData.subject}
-        onChange={handleChange}
+      <TextField
+        id="message"
+        variant="outlined"
+        label="Send me an offer*"
+        margin="normal"
+        name="message"
+        value={formik.values.message}
+        onChange={formik.handleChange}
+        error={formik.touched.message && Boolean(formik.errors.message)}
+        helperText={formik.touched.message && formik.errors.message}
       />
       <MyButton
-        value="Submit"
-        href="#"
-        colorType="black"
-        sx={{ display: 'block' }}
+        type="submit"
         endIcon={<NavigateNextIcon />}
+        value="Submit"
       />
     </Box>
   );
