@@ -1,4 +1,5 @@
 import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 const sendEmail = (formData) => {
   emailjs
@@ -10,14 +11,10 @@ const sendEmail = (formData) => {
     )
     .then(
       (result) => {
-        alert(result.text);
-        // setSuccessMsg(result.text);
-        // alert(successMsg)
+        toast.success(`${result.text}! form submitted.`);        
       },
       (error) => {
-        alert(error.text);
-        // setErrorMsg(error.text);
-        // alert(errorMsg);
+        toast.error(`${error.text}! try again.`);
       }
     );
 };

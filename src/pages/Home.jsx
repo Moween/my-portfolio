@@ -3,6 +3,7 @@ import Box from '@material-ui/core/Box';
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/styles';
+import { ToastContainer } from 'react-toastify';
 
 import wave from '../images/wave.png';
 import { useStyles } from '../utils/styles';
@@ -20,6 +21,7 @@ const Home = () => {
   const { greetingText } = useStyles(theme);
   return (
     <Box component="main">
+      <ToastContainer autoClose={false} />
       <Box component="section" className="landing-section">
         <Box>
           <Box className="greeting-text">
