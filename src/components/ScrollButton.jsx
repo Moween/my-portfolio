@@ -1,11 +1,9 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import Fab from '@mui/material/Fab';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { MediaQueryContext } from './App';
 
 const ScrollButton = () => {
-  const { mobile, tablet } = useContext(MediaQueryContext);
   const [isVisible, setIsVisible] = useState(false);
 
   const fabStyle = {
@@ -42,7 +40,7 @@ const ScrollButton = () => {
     <Fab
       aria-label="scroll-button"
       onClick={scrollToTop}
-      size={mobile || tablet ? 'medium' : 'large'}
+      size="medium"
       sx={
         {
           opacity: isVisible ? 1 : 0,
