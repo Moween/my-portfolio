@@ -1,4 +1,8 @@
-.about-section,
+.about-section {
+  height: 80vh;
+  background-color: $black;
+}
+
 .achievement,
 .article-section,
 .contact-section {
@@ -37,9 +41,22 @@
   }
 }
 
+.typewriting {
+  @include typewriter;
+}
+
+.wave {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  @include waving-hand;
+}
+
+
 #about {
   margin-top: auto;
 }
+
 
 #achievement {
   position: relative;
@@ -52,44 +69,14 @@
 }
 
 #contacts {
-  background-color: $yellow;
+  background-color: white;
   color: $black;
   position: relative;
   margin-left: calc(50% - 50vw);
   margin-bottom: 0;
   width: 100vw;
-  form {
-    div {
-      margin: 10px auto;
-      width: 70%;
-      display: block;
-    }
-    label {
-      color: $black;
-      left: 17%;
-      width: 15%;
-    }
-    input[type="text"] {
-      border-color: $black;
-      width: inherit;
-    }
-    textarea {
-      width: 49%;
-      background-color: $yellow;
-      border-color: rgba(0, 0, 0, 0.2);
-      border-radius: 3%;
-      &:focus {
-        outline: 1px solid rgba(0, 0, 0, 0.2);
-      }
-      &::placeholder {
-        color: $black;
-        position: absolute;
-        left: 11%;
-      }
-    }
-    a {
-      width: 49%;
-    }
+  svg.MuiSvgIcon-root {
+    padding-top: 0.5rem;
   }
 }
 
@@ -97,24 +84,26 @@ footer {
   @include flexItems(column-reverse, space-around, center);
 }
 
-footer .social-icons-container {
-  
-}
-
-.typewriting {
-  @include typewriter
-}
-
-.wave {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-left: 0.5rem;
-  @include waving-hand
+div.MuiDialog-paperScrollPaper {
+  width: 250px;
+  div.MuiDialogTitle-root {
+    .MuiTypography-root.MuiTypography-h6 {
+      text-align: center;
+    }
+  }
 }
 
 // medium screens and above
 
 @media screen and (min-width: 768px) {
+  .about-section {
+    height: 50vh;
+  }
+  .achievement,
+  .article-section,
+  .contact-section {
+    height: 70vh;
+  }
   .about-section,
   .project-section,
   .achievement,
@@ -143,12 +132,16 @@ footer .social-icons-container {
     }
   }
 
+  .floating-img {
+    @include floating;
+  }
+
   #achievement {
     ul {
       width: 70%;
     }
   }
-  
+
   .article-section {
     margin: auto 0;
     position: relative;
@@ -158,25 +151,23 @@ footer .social-icons-container {
       top: 30%;
     }
   }
-  
-  #contacts {
-    form {
-      div {
-        width: 60%;
-      }
-      textarea {
-        width: 36%;
-        &::placeholder {
-          left: 6%;
-        }
-      }
-      a {
-        width: 36%;
-      }
-    }
-  }
 
   footer {
     @include flexItems(row, space-between, center);
+  }
+  div.MuiDialog-paperScrollPaper {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .about-section,
+  .achievement,
+  .article-section {
+    height: 100vh;
+  }
+
+  .contact-section {
+    height: 70vh;
   }
 }
