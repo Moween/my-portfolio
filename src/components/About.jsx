@@ -17,8 +17,7 @@ const About = () => {
         <Box className={bioInfo}>
           <Box className={bio}>
             <Typography variant="body1">
-              I am a self-taught Front-end web developer, and an enthusiatic
-              JavaScript lover who turns static web designs into functional,
+              I am a self-taught front-end web developer, who turns static web designs into functional,
               scalable and optimized web applications..My curiosity about how
               the web works made my transition into the tech industry. When I am
               not coding, you'll find me outdoors or catching up with my
