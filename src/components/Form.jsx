@@ -51,16 +51,13 @@ const ContactForm = () => {
         label="Send me an offer*"
         margin="normal"
         name="message"
+        maxRows={4}
         value={formik.values.message}
         onChange={formik.handleChange}
         error={formik.touched.message && Boolean(formik.errors.message)}
         helperText={formik.touched.message && formik.errors.message}
       />
-      <MyButton
-        type="submit"
-        endIcon={<NavigateNextIcon />}
-        value="Submit"
-      />
+      <MyButton type="submit" endIcon={<NavigateNextIcon />} value="Submit" />
     </Box>
   );
 };
