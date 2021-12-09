@@ -11,7 +11,7 @@ const sendEmail = (formData) => {
     )
     .then(
       (result) => {
-        toast.success(`${result.text}! form submitted.`);        
+        toast.success(`${result.text}! form submitted. Thank you for your request.`);   
       },
       (error) => {
         toast.error(`${error.text}! try again.`);
