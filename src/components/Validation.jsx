@@ -17,8 +17,9 @@ const Validation = () => {
       message: '',
     },
     validationSchema: formValidationSchema,
-    onSubmit: (formData) => {
-      sendEmail(formData);
+    onSubmit: async (formData, { resetForm }) => {
+      await sendEmail(formData);
+      resetForm({});
     },
   });
   return formik;
