@@ -100,7 +100,7 @@ export const contactMeans = [
   },
   {
     action: 'Email',
-    details: 'moween1998@gmail.com'
+    details: 'moween1998@gmail'
   },
   {
     action: 'Location',
