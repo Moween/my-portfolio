@@ -540,6 +540,7 @@ footer .social-icons-container .social-icon:hover {
 }
 
 #achievement {
+  margin-bottom: 0;
   position: relative;
   background-color: #212121;
   margin-left: calc(50% - 50vw);
