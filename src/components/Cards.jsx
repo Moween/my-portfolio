@@ -12,28 +12,31 @@ import { MediaQueryContext } from './App';
 import { useStyles } from '../utils/styles';
 
 const Cards = () => {
-  const { mobile } = useContext(MediaQueryContext);
+  const { mobile, tablet } = useContext(MediaQueryContext);
   const { contactCard, contactCardInfo } = useStyles();
-  const iconsArr = [
-    <PhoneIcon />,
-    <EmailIcon />,
-    <LocationOnIcon />,
-  ];
+  const iconsArr = [<PhoneIcon />, <EmailIcon />, <LocationOnIcon />];
 
   return (
     <Box
       sx={{
-        width: '80%',
+        width: tablet ? '90%' : '70%',
         height: mobile ? '100%' : 'auto',
         m: '0 auto',
         display: 'flex',
         flexDirection: mobile ? 'column' : 'row',
+        flexWrap: tablet ? 'wrap' : 'no-wrap',
         justifyContent: 'space-between',
         alignItems: 'center',
+        alignContent: mobile || tablet ? 'space-between' : '',
+        position: 'relative',
       }}
     >
       {contactMeans.map((card, index) => (
-        <Card className={contactCard} key={index}>
+        <Card
+          className={contactCard}
+          key={index}
+          sx={{ m: index === 2 && tablet ? '0.5rem auto' : '' }}
+        >
           <CardContent
             className={contactCardInfo}
             sx={{

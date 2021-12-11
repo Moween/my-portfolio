@@ -24,6 +24,7 @@ const Contacts = () => {
         <HeadingText text="Contact me" />
         <Cards />
         <Button
+          variant="contained"
           onClick={handleClickOpen}
           sx={{
             [`& .MuiButton-root`]: { mt: '3rem' },
