@@ -445,7 +445,7 @@ export const useStyles = makeStyles((theme) => ({
   //Footer
   footer: {
     width: '100%',
-    height: '15vh',
+    height: '25vh',
     [theme.breakpoints.up('lg')]: {
       height: '10vh',
     },

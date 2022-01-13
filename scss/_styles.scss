@@ -83,7 +83,7 @@
 }
 
 footer {
-  @include flexItems(column-reverse, space-around, center);
+  @include flexItems(column, space-around, center);
 }
 
 div.MuiDialog-paperScrollPaper {

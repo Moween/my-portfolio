@@ -10,13 +10,14 @@ const Footer = () => {
   return (
     <Box component="footer" className={footer}>
       <Box>
-        <Typography variant="body1" component="p">
+        <SocialIcons />
+      </Box>
+      <Box sx={{ display: { md: 'flex' } }}>
+        <Typography sx={{ color: '#dcab07' }}>
           &copy; 2021 Ezeilo Orbie
         </Typography>
       </Box>
-      <Box>
-        <SocialIcons />
-      </Box>
+      <Typography>Inspired by Somto Nwakasi❤️</Typography>
     </Box>
   );
 };
