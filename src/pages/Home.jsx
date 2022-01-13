@@ -47,7 +47,7 @@ const Home = () => {
             </Typography>
             <MyButton
               endIcon={<CloudDownloadOutlinedIcon />}
-              href="https://docs.google.com/document/d/1a8tOj2oiga0D14iPbPSV0STq1oVc6u8RhEeKE0pJOjU/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1-fzh0CVWjb6lCxKTwIASS_vi17lSHMLPNoDzgRF-Rco/edit?usp=sharing"
               value="Download resume"
               target="new"
               colorType="yellow"
