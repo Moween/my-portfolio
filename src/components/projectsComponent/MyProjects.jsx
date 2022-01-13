@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project from '../../components/projectsComponent/Project';
 import projects from '../../utils/data';
-import sketchProjectImg from '../../images/etch-a-sketch_img.png';
+import betTipsImg from '../../images/bettips_img.png';
 import rockPaperProjectImg from '../../images/rock-paper-scissors.png';
 import weatherProjectImg from '../../images/weather-app_img.png';
 import fashionProjectImg from '../../images/mo-fashion-store_img.png';
@@ -11,11 +11,11 @@ import HeadingText from '../HeadingText';
 const MyProjects = () => {
   const [projectData] = useState(projects);
   const projectsScreenShots = [
+    betTipsImg,
     weatherProjectImg,
+    fashionProjectImg,
     todoProjectImg,
     rockPaperProjectImg,
-    fashionProjectImg,
-    sketchProjectImg,
   ];
 
   return (
