@@ -274,11 +274,9 @@ export const useStyles = makeStyles((theme) => ({
   imgBox: {
     boxShadow: '0 2px 3px rgb(50, 50, 50)',
     [theme.breakpoints.down('sm')]: {
-      // marginTop: '10px',
       width: '100%',
     },
     [theme.breakpoints.up('md')]: {
-      // marginTop: 0,
       width: '45%',
       height: '45%',
       borderRadius: '5px',
