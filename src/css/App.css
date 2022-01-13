@@ -48,6 +48,131 @@ table {
   border-spacing: 0;
 }
 
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #1b5fc7;
+  }
+}
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #1b5fc7;
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.blinking {
+  -webkit-animation: blink 1s linear infinite;
+          animation: blink 1s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
   width: 100%;
   padding: 1.25rem;
@@ -88,7 +213,7 @@ header div {
     top: 0.5rem;
     width: 28px;
     height: 3px;
-    background: #FFFFFF;
+    background: #ffffff;
   }
   .menu .menu-btn__burger::before {
     content: '';
@@ -96,7 +221,7 @@ header div {
     top: -8px;
     width: 28px;
     height: 3px;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
@@ -106,7 +231,7 @@ header div {
     top: 8px;
     width: 20px;
     height: 3px;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
@@ -141,7 +266,7 @@ header div {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
     height: 100vh;
-    background-color: #0F0F0F;
+    background-color: #0a0b0d;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -161,11 +286,11 @@ header div {
   .menu .navbar .menu-nav_link {
     text-decoration: none;
     cursor: pointer;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 0.5rem;
   }
   .menu .navbar .menu-nav_link:hover {
-    color: #FFF124;
+    color: #dcab07;
   }
 }
 
@@ -188,11 +313,11 @@ header div {
   .menu .menu-nav_link {
     text-decoration: none;
     cursor: pointer;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 0.5rem;
   }
   .menu .menu-nav_link:hover {
-    color: #FFF124;
+    color: #dcab07;
   }
 }
 
@@ -200,11 +325,12 @@ header div {
   height: 80vh;
   position: relative;
   width: 100%;
-  text-align: center;
+  text-align: justify;
 }
 
 .landing-section .greeting-text {
-  margin-top: 90px;
+  padding: 0.875rem 1rem;
+  margin-top: 5rem;
 }
 
 .landing-section .greeting-text h5 {
@@ -219,29 +345,22 @@ header div {
   line-height: 1.75;
 }
 
-.landing-section .social-icons-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.social-icons-container {
+  visibility: hidden;
 }
 
-.landing-section .social-icons-container .social-icon {
+footer .social-icons-container {
+  visibility: visible;
+  color: #ffffff;
+}
+
+footer .social-icons-container .social-icon {
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.landing-section .social-icons-container .social-icon:hover {
-  color: #FFF124;
+footer .social-icons-container .social-icon:hover {
+  color: #dcab07;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: all 0.5s ease-in-out;
@@ -250,9 +369,11 @@ header div {
 
 @media screen and (min-width: 768px) {
   .landing-section {
+    height: 50vh;
     text-align: left;
   }
   .landing-section .greeting-text {
+    margin-top: 90px;
     padding: 1rem;
   }
   .landing-section .greeting-text h5 {
@@ -262,8 +383,9 @@ header div {
     width: 50%;
   }
   .landing-section .social-icons-container {
+    visibility: visible;
     position: absolute;
-    top: 20%;
+    top: 15%;
     right: 10.5%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,9 +402,58 @@ header div {
             align-items: center;
     height: 150px;
   }
+  .landing-section .social-icons-container .social-icon {
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .landing-section .social-icons-container .social-icon:hover {
+    color: #dcab07;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
-.about-section,
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+  .landing-section {
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .landing-section .greeting-text {
+    padding: 1rem;
+  }
+  .landing-section .greeting-text h5 {
+    font-size: 1.5rem;
+  }
+  .landing-section .social-icons-container {
+    top: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .landing-section {
+    height: 73vh;
+  }
+}
+
+.about-section {
+  height: 80vh;
+  background-color: #0a0b0d;
+}
+
 .achievement,
 .article-section,
 .contact-section {
@@ -341,11 +512,40 @@ header div {
   margin-top: auto;
 }
 
+.typewriting {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #1b5fc7;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+          animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite alternate;
+}
+
+.wave {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  -webkit-animation: wave 1s ease-in infinite;
+          animation: wave 1s ease-in infinite;
+}
+
+#about {
+  margin-top: auto;
+}
+
 #achievement {
+  margin-bottom: 0;
   position: relative;
   background-color: #212121;
   margin-left: calc(50% - 50vw);
   width: 100vw;
+  margin-bottom: 0;
 }
 
 #achievement ul {
@@ -353,70 +553,50 @@ header div {
 }
 
 #contacts {
-  background-color: #FFF124;
-  color: #0F0F0F;
+  background-color: white;
+  color: #0a0b0d;
   position: relative;
   margin-left: calc(50% - 50vw);
+  margin-bottom: 0;
   width: 100vw;
 }
 
-#contacts form div {
-  margin: 10px auto;
-  width: 70%;
-  display: block;
+#contacts svg.MuiSvgIcon-root {
+  padding-top: 0.5rem;
 }
 
-#contacts form label {
-  color: #0F0F0F;
-  left: 17%;
-  width: 15%;
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#contacts form input[type="text"] {
-  border-color: #0F0F0F;
-  width: inherit;
+div.MuiDialog-paperScrollPaper {
+  width: 250px;
 }
 
-#contacts form textarea {
-  width: 49%;
-  background-color: #FFF124;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 3%;
-}
-
-#contacts form textarea:focus {
-  outline: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-#contacts form textarea::-webkit-input-placeholder {
-  color: #0F0F0F;
-  position: absolute;
-  left: 11%;
-}
-
-#contacts form textarea:-ms-input-placeholder {
-  color: #0F0F0F;
-  position: absolute;
-  left: 11%;
-}
-
-#contacts form textarea::-ms-input-placeholder {
-  color: #0F0F0F;
-  position: absolute;
-  left: 11%;
-}
-
-#contacts form textarea::placeholder {
-  color: #0F0F0F;
-  position: absolute;
-  left: 11%;
-}
-
-#contacts form a {
-  width: 49%;
+div.MuiDialog-paperScrollPaper div.MuiDialogTitle-root .MuiTypography-root.MuiTypography-h6 {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
+  .about-section {
+    height: 50vh;
+  }
+  .achievement,
+  .article-section,
+  .contact-section {
+    height: 70vh;
+  }
   .about-section .heading-container,
   .project-section .heading-container,
   .achievement .heading-container,
@@ -452,6 +632,17 @@ header div {
   .about-section article {
     height: 100vh;
   }
+  .floating-img {
+    -webkit-animation-name: floating;
+            animation-name: floating;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    margin-top: 5px;
+  }
   #achievement ul {
     width: 70%;
   }
@@ -475,31 +666,39 @@ header div {
     position: absolute;
     top: 30%;
   }
-  #contacts form div {
-    width: 60%;
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  #contacts form textarea {
-    width: 36%;
+  div.MuiDialog-paperScrollPaper {
+    width: 400px;
   }
-  #contacts form textarea::-webkit-input-placeholder {
-    left: 6%;
+}
+
+@media only screen and (min-width: 1140px) {
+  .about-section,
+  .achievement,
+  .article-section {
+    height: 100vh;
   }
-  #contacts form textarea:-ms-input-placeholder {
-    left: 6%;
-  }
-  #contacts form textarea::-ms-input-placeholder {
-    left: 6%;
-  }
-  #contacts form textarea::placeholder {
-    left: 6%;
-  }
-  #contacts form a {
-    width: 36%;
+  .contact-section {
+    height: 70vh;
   }
 }
 
 body {
-  color: #FFFFFF;
-  background-color: #0F0F0F;
+  color: #ffffff;
+  background-color: #0a0b0d;
 }
 /*# sourceMappingURL=App.css.map */

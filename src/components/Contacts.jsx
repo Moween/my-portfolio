@@ -1,71 +1,41 @@
-import React, { useState  } from "react";
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import TextField from '@material-ui/core/TextField';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import HeadingText from "./HeadingText";
-import MyButton from "./MyButton";
+import HeadingText from './HeadingText';
+import Cards from './Cards';
+import FormDialog from './FormDialog';
+import { useStyles } from '../utils/styles';
 
 const Contacts = () => {
-  const [contactDetails, setContactDetails] = useState({
-    name: "",
-    email: "",
-    subject: "",
-  });
+  const [open, setOpen] = useState(false);
+  const { hireBtn } = useStyles();
 
-  const handleChange = ({ target: input }) => {
-    const { name, value } = input;
-    setContactDetails((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
-    <section id="contacts" className="contact-section">
-      <div>
+    <Box component="section" id="contacts" className="contact-section">
+      <Box>
         <HeadingText text="Contact me" />
-        <Box
-          component="form"
+        <Cards />
+        <Button
+          variant="contained"
+          onClick={handleClickOpen}
           sx={{
-            '& > :not(style)': { m: 1, width: '25ch' },
+            [`& .MuiButton-root`]: { mt: '3rem' },
           }}
-          noValidate
-          autoComplete="off"
+          className={hireBtn}
         >
-          <TextField 
-            sx={{display: 'block'}}
-            id="outlined-basic" 
-            label="Name"
-            variant="outlined"
-            margin="normal"
-            fullWidth 
-            name="name"
-            value={contactDetails.name} 
-            onChange={handleChange}
-          />
-          <TextField 
-            id="outlined-basic" 
-            label="Email" 
-            variant="outlined"
-            margin="normal" 
-            name="email"
-            value={contactDetails.email}
-            onChange={handleChange}
-          />
-          <TextareaAutosize
-            aria-label="minimum height"
-            minRows={3}
-            placeholder="Let me hear your idea"
-            style={{ margin: '0 auto', display: 'block' }}
-            name="subject"
-            value={contactDetails.subject}
-            onChange={handleChange}
-          />
-          <MyButton value="Submit" href="#" colorType="black" endIcon={<NavigateNextIcon />} />
-        </Box>
-      </div>
-    </section>
+          Hire me
+        </Button>
+        <FormDialog open={open} handleClose={handleClose} />
+      </Box>
+    </Box>
   );
 };
 

@@ -4,7 +4,7 @@ import { useStyles } from '../utils/styles';
 
 const MyButton = (props) => {
   const { btn } = useStyles(props);
-  const { value, href, endIcon } = props;
+  const { value, href, endIcon, sx, type } = props;
   return (
     <Button
       variant="contained" 
@@ -13,6 +13,8 @@ const MyButton = (props) => {
       endIcon={endIcon}
       href={href}
       target="new"
+      sx={{...sx}}
+      type={type}
     >
       {value}
     </Button>

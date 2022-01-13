@@ -2,9 +2,10 @@
   height: 80vh;
   position: relative;
   width: 100%;
-  text-align: center;
+  text-align: justify;
   .greeting-text {
-    margin-top: 90px;
+    padding: 0.875rem 1rem;
+    margin-top: 5rem;
     h5 {
       font-size: 1rem;
     }
@@ -15,24 +16,32 @@
       line-height: 1.75;
     }
   }
-  .social-icons-container {
-    @include flexItems(row, center, center);
-    .social-icon {
-      cursor: pointer;
-      color: $white;
-      &:hover {
-        color: $yellow;
-        transform: rotate(360deg);
-        @include transition-ease;      
-      }
+}
+
+.social-icons-container {
+  visibility: hidden;
+}
+
+footer .social-icons-container {
+  visibility: visible;
+  color: $white;
+  .social-icon {
+    cursor: pointer;
+    color: $white;
+    &:hover {
+      color: $yellow;
+      transform: rotate(360deg);
+      @include transition-ease;
     }
-  }  
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .landing-section{
+  .landing-section {
+    height: 50vh;
     text-align: left;
     .greeting-text {
+      margin-top: 90px;
       padding: 1rem;
       h5 {
         font-size: 1.5rem;
@@ -42,11 +51,42 @@
       width: 50%;
     }
     .social-icons-container {
+      visibility: visible;
       position: absolute;
-      top: 20%;
+      top: 15%;
       right: 10.5%;
       @include flexItems(column, space-between, center);
-      height: 150px;      
+      height: 150px;
+      .social-icon {
+        cursor: pointer;
+        color: $white;
+        &:hover {
+          color: $yellow;
+          transform: rotate(360deg);
+          @include transition-ease;
+        }
+      }
     }
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width:  1024px) {
+  .landing-section {
+    height: 50vh;
+    @include flexItems(column, center, center);
+    .greeting-text {
+      padding: 1rem;
+      h5 {
+        font-size: 1.5rem;
+      }
+    }
+    .social-icons-container {
+      top: 40%;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .landing-section {
+    height: 73vh;    
   }
 }
